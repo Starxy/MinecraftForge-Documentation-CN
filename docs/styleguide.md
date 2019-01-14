@@ -1,28 +1,33 @@
-Style Guide
-===========
+# 样式指南
 
-Guide For Contributing to This Documentation
---------------------------------------------
+## 向原英文仓库贡献文本的说明
 
-This documentation is meant to be explanatory. Please explain how to do things, and break it down into reasonable chunks.
-We have a wiki elsewhere that can capture more comprehensive code examples.
+这个文档意在“解释”。请说明事物是如何工作的，并且分割成合理的部分来进行讨论
+你可以在另一个 Wiki 页面找到更全面的代码示例
 
-Our audience is anyone who wants to understand how to build a mod using Forge.
+我们面向的是任何想要了解如何用 Forge 构建 mod 的人
 
-Please don't try to turn this documentation into a tutorial on Java Development - it is intended for people who understand how a Java class works, and other fundamental structures of Java.
+请不要试图将本文档变为 Java 开发的教程。这份文档仅适合于了解 Java 类如何工作并对 Java 其他结构有了解的人
 
-Formatting
-----------
+## 向原英文仓库贡献的格式
 
 !!! important
 
-    Please use **two spaces** to indent, not tabs.
+    请使用**两个空格**缩进而不是 tabs
 
-Titles should be capitalized in the standard titling format. For example,
+标题应该以标准的标题格式大写。例如：
 
-  * Guide For Contributing to This Documentation
-  * Building and Testing Your Mod
+- Guide For Contributing to This Documentation
+- Building and Testing Your Mod
 
-Essentially, capitalize everything but unimportant words.
+本质上讲。除了不重要的单词以外都要大写。
 
-Please use equals and dash underlines, instead of `#` and `##`. For h3 and lower, `###` etc. is fine. The source of this file contains an example for equals and dash underlining. Equals underlines create h1 text, and dash underlines create h2 text.
+请使用等号 `=` 和下划线 `_` 来显示一级和二级标题，而不是井号。对于三级或更低等级的标题井号是允许的。
+
+## 向翻译仓库贡献文本的说明
+
+对翻译文档更改时请先参考代码仓库的 [README.md 说明](https://github.com/Starxy/MinecraftForge-Documentation-CN/blob/master/README.md) 该文件内包含了主要的风格检查和排版格式的信息
+
+与原英文官方文档格式不同的是，我们倾向于使用**四个空格**，同样也请不要使用 Tab 缩进，或者在编辑器中选择用空格替换掉 Tab。对于标题，我们始终采用井号进行缩进。
+
+请在对翻译文本进行更改之前完整浏览说明文件。感谢
