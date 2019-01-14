@@ -1,13 +1,13 @@
 # If you add a page, you must add it to the index here
-pages:
-  - Home: 'index.md'
-  - Style Guide: 'styleguide.md'
-  - Getting Started:
-    - Home: 'gettingstarted/index.md'
-    - Structuring Your Mod: 'gettingstarted/structuring.md'
-    - Forge Update Checker: 'gettingstarted/autoupdate.md'
-    - Dependency Management: 'gettingstarted/dependencymanagement.md'
-    - Debug Profiler: 'gettingstarted/debugprofiler.md'
+nav:
+  - 主页: 'index.md'
+  - 样式指南: 'styleguide.md'
+  - 入门:
+    - 概述: 'gettingstarted/index.md'
+    - 你的 Mod 的文件结构: 'gettingstarted/structuring.md'
+    - Forge 更新检查器: 'gettingstarted/autoupdate.md'
+    - 依赖管理: 'gettingstarted/dependencymanagement.md'
+    - 调试分析器: 'gettingstarted/debugprofiler.md'
   - Concepts:
     - Sides: 'concepts/sides.md'
     - Resources: 'concepts/resources.md'
@@ -75,7 +75,7 @@ pages:
     - PR Guidelines: 'forgedev/prguidelines.md'
 
 # Do not edit in PRs below here
-site_name: Forge Documentation
+site_name: Forge 中文文档
 
 markdown_extensions:
   - admonition
