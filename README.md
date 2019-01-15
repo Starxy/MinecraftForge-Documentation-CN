@@ -1,6 +1,6 @@
 # Minecraft Forge Documentation
 
-这里是使用 Minecraft Forge 文档的中文翻译。由 Mkdocs 进行构建
+这里是使用 Minecraft Forge 文档的中文翻译。由 Mkdocs 进行构建，由 github page 进行部署。[查看文档](https://starxy.github.io/MinecraftForge-Documentation-CN/)
 
 英文的文档可以在这里找到: [http://mcforge.readthedocs.io/](http://mcforge.readthedocs.io/)
 

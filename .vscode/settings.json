@@ -1,5 +1,6 @@
 {
     "markdownlint.config": {
-        "MD007": {"indent": 4}
+        "MD007": {"indent": 4},
+        "MD029": false //due to sometimes order doesn't start as one
     }
 }
