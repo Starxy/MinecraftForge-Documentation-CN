@@ -1,0 +1,10 @@
+# Config file for automatic testing at travis-ci.org
+sudo: false  # http://docs.travis-ci.com/user/migrating-from-legacy/
+language: python
+python:
+  - 3.6
+install:
+  - pip install mkdocs
+  - pip install -r python-requirements.txt
+
+script: mkdocs gh-deploy
