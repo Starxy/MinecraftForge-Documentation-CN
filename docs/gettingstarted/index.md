@@ -46,7 +46,7 @@
 
 !!! note
 
-    如果您在第四步运行 `:decompileMC` 看到以下错误
+    如果你在第四步运行 `:decompileMC` 看到以下错误
 
     ```
     Execution failed for task ':decompileMc'.
@@ -57,7 +57,7 @@
 
 ## 无需控制台的 IntelliJ IDEA 配置
 
-这部分开始时假设您已经根据上一部分的第一步到第三部创建了项目文件夹，因此这一部分从第四步开始
+这部分开始时假设你已经根据上一部分的第一步到第三部创建了项目文件夹，因此这一部分从第四步开始
 
 4. 启动 IDEA 并且选择导入 `build.gradle` 文件，使用默认的 gradle wrapper 选项。等待该步骤完成后，你可以打开右侧的 Gradle 面板，里面会有一些 Gradle Tasks。
 5. 双击运行 `setupDecompWorkspace` 任务（在 `forgegradle` 任务组中）。这一任务将会等待一段时间（译注：墙内用户甚至可能在下载阶段失败），并且使用不少的内存。如果该阶段失败，你可以在 IDEA 的 gradle settings 窗口的 `Gradle VM options` 选项中添加 `-Xmx3G` 来提高内存使用量，或者更改全局的 gradle 配置文件。
@@ -94,4 +94,4 @@
 
 !!! note
 
-    如果你想编写服务端 mod，强烈建议您在专用服务器环境下来测试您的 mod。
+    如果你想编写服务端 mod，强烈建议你在专用服务器环境下来测试你的 mod。

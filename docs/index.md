@@ -8,7 +8,7 @@
 
 翻译项目 [Starxy/MinecraftForge-Documentation-CN](https://github.com/Starxy/MinecraftForge-Documentation-CN)
 
-如果您在浏览时有关于文章内容的问题，请对照原文，如果是翻译问题欢迎向本仓库内提交 PR 或 issue。
+如果你在浏览时有关于文章内容的问题，请对照原文，如果是翻译问题欢迎向本仓库内提交 PR 或 issue。
 
 ## 翻译进度
 
