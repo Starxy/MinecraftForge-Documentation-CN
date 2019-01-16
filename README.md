@@ -42,6 +42,10 @@ Markdown 编写遵循 [Markdownlint Rules](https://github.com/DavidAnson/markdow
 
 最后，仓库所有者是代码洁癖患者，请尽可能处理掉所有 Waring 信息
 
+## 已知的问题
+
+- 原文档使用的 Mkdocs 模板由 Forge 官方仓库提供。已修复一些链接问题和资源获取问题。但是仍存在如字体大小和行间距不合适的问题。
+
 ## 授权
 
 该仓库 Fork 自 [MinecraftForge/Documentation](https://github.com/MinecraftForge/Documentation) 原仓库采用 [MIT 协议](https://github.com/MinecraftForge/Documentation/blob/master/LICENSE)。该仓库中 `forge_theme` 内容和英文原文继承该协议。其他中文翻译均采用 [知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-sa/4.0/)[（简体中文）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 进行许可。
