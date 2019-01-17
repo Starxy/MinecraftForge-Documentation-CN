@@ -1,25 +1,25 @@
-# Debug Profiler
+# 调试分析器
 
-Minecraft provides a Debug Profiler that can be used to find time consuming code. Specially considering things like `TickEvents` and Ticking `TileEntities` this can be very useful for modders and server owners that want to find a lag source.
+Minecraft 提供了一个可以查找耗时代码的调试分析器。关注类似 `TickEvents` 和 `TileEntities`的内容，有利于 mod 开发者和服务器管理者对卡顿情况来源进行排查。
 
-## Using the Debug Profiler
+## 使用调试分析工具
 
-The Debug Profiler is very simple to use. It requires two commands `/debug start`, which starts the profiling process, and `/debug stop`, which ends it.
-The important part here is that the more time you give it to collect the data the better the results will be.
-It is recommended to at least let it collect data for a minute.
+调试分析器使用的非常简单。只需要两个命令：`/debug start` 该命令用来启动分析过程；`/debug stop` 用来停止。
+
+显而易见的，你收集的数据越多，分析产生的结果越准确，我们建议进行调试分析要收集不少于一分钟的数据。
 
 !!! note
-  Naturally, you can only profile code paths that are actually being reached. Entities and TileEntities that you want to profile must exist in the world to show up in the results.
+  当然你只能对实际上游戏运行能访问到的代码进行分析。如果你想对某些实体进行测试分析，该实体必须在世界中存在，这样的话调试分析器才能捕捉到该实体。
 
-After you've stopped the debugger it will create a new file, it can be found within the `debug` subdirectory in your run directory.
-The file name will be formatted with the date and time as `profile-results-yyyy-mm-dd_hh.mi.ss.txt`
+当你停止调试调试分析器时，分析器会在你的运行目录中生成一个名为 `debug` 的文件夹，同时在该文件夹中生成一个 `profile-results-yyyy-mm-dd_hh.mi.ss.txt` 命名格式的文件。该文件为本次分析的报告。
 
-## Reading a Profiling result
+## 阅读调试分析报告
 
-At the top it first tells you how long in milliseconds it was running and how many ticks ran in that time.
+文件开头部分告诉了你本次调试分析总共花费了多少毫秒，并且在该时间内产生了多少个 tick。
 
-Below that, you will find information similar to the snippet below:
-```
+紧跟着你可以找到类似于以下形式的文本。
+
+```text
 [00] levels - 96.70%/96.70%
 [01] |   World Name - 99.76%/96.47%
 [02] |   |   tick - 99.31%/95.81%
@@ -30,19 +30,23 @@ Below that, you will find information similar to the snippet below:
 [05] |   |   |   |   |   minecraft:furnace - 33.35%/0.14%
 [05] |   |   |   |   |   minecraft:chest - 2.39%/0.01%
 ```
-Here is a small explanation of what each part means
+
+让我们以第三行为例来简单解释以下各个部分代表什么意思
 
 | [02]                     | tick                  | 99.31%       | 95.81%       |
 | :----------------------- | :---------------------- | :----------- | :----------- |
-| The Depth of the section | The Name of the Section | The percentage of time it took in relation to it's parent. For Layer 0 it's the percentage of the time a tick takes, while for Layer 1 it's the percentage of the time its parent takes | The second Percentage tells you how much Time it took from the entire tick.
+| 该部分的深度 | 该部分的名称 | 该部分的值是与父节点时间花费的百分比 | 该部分的值是相对于整个时间花费的百分比
 
-## Profiling your own code
+## 对你的代码进行分析
 
-The Debug Profiler has basic support for `Entity` and `TileEntity`. If you would like to profile something else, you may need to manually create your sections like so:
+默认得调试分析器仅对 `Entity` 和 `TileEntity` 提供了基本的支持。如果你想对其他的一些东西进行分析，你可能手动创建如下的部分。
+
 ```JAVA
   Profiler#startSection(yourSectionName : String);
-  //The code you want to profile
+  //你想分析的代码
   Profiler#endSection();
 ```
-You can obtain the the `Profiler` instance from a `World`, `MinecraftServer`, or `Minecraft` instance.
-Now you just need to search the File for your section name.
+
+你可以从 `World`、`MinecraftServer` 或 `Minecraft` 实例处获取 `Profiler` 实例。
+
+现在你可以对分析报告文件进行搜索找到你的 section name。
