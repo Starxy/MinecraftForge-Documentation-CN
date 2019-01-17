@@ -73,47 +73,45 @@
 |---------------------------------:|:------------------:|:--------------:|:------------|
 |                            modid |       String       |    required    |一个唯一的 mod 标识。必须为小写字符。并且长度在 64 字符以内 |
 |                             name |       String       |       ""       | 一个可读性较强的用来显示的名字 |
-|                          version |       String       |       ""       | mod 的版本。该属性值只能为由点号分隔的数字组成。 理想情况下，该值符合 [语义化的版本控制](https://semver.org/)。 Even if `useMetadata` is set to `true`,即便是 `useMetadata` 设置为 `true`，将该值放在此处定义也是比较好的选择|
-|                     dependencies |       String       |       ""       | mod 的依赖。 The specification is described in the Forge `@Mod` javadoc:<br><blockquote><p>A dependency string can start with the following four prefixes: `"before"`, `"after"`, `"required-before"`, `"required-after"`; then `":"` and the `modid`.</p><p>Optionally, a version range can be specified for the mod by adding `"@"` and then the version range.[\*](#version-ranges)</p><p>If a "required" mod is missing, or a mod exists with a version outside the specified range, the game will not start and an error screen will tell the player which versions are required.</p>
+|                          version |       String       |       ""       | mod 的版本。该属性值只能为由点号分隔的数字组成。 理想情况下，该值符合 [语义化的版本控制](https://semver.org/)。 即便是 `useMetadata` 设置为 `true`，将该值放在此处定义也是比较好的选择|
+|                     dependencies |       String       |       ""       | mod 的依赖。可以在 Forge 的 Javadoc `@Mod` 部分找到详细的规范描述：依赖关系字符串必须具有以下四个前缀之一：`"before"`，`"after"`，`"required-before"`，`"required-after"`，紧接着是一个冒号 ":" 和之前定义的 "modid" 。可选的，你可以通过添加一个 `"@"` 然后再指定一个版本范围来为 mod 指定所需要的版本要求。如果缺少相应的 `required mod` 或者玩家使用了超出对版本的 mod， 玩家会启动失败并且会收到相应的错误提示|
 |                      useMetadata |       boolean      |      false     | 若该属性值设置为 `true`，由 `@Mod` 定义的内容会被 `mcmod.info` 内容覆盖 |
-| clientSideOnly | boolean | false | If either is set to `true`, the jar will be skipped on the other side, and the mod will not load. If both are true, the game crashes. |
-| serverSideOnly | boolean | false | If either is set to `true`, the jar will be skipped on the other side, and the mod will not load. If both are true, the game crashes. |
-|        acceptedMinecraftVersions |       String       |       ""       | The version range of Minecraft the mod will run on.[\*](#version-ranges) An empty string will match all versions. |
-|         acceptableRemoteVersions |       String       |       ""       | Specifies a remote version range that this mod will accept as valid.[\*](#version-ranges) `""` Matches the current version, and `"*"` matches all versions. |
-|           acceptableSaveVersions |       String       |       ""       | A version range specifying compatible save version information.[\*](#version-ranges) If you follow an unusual version convention, use `SaveInspectionHandler` instead. |
-|           certificateFingerprint |       String       |       ""       | See the tutorial on [jar signing](../concepts/jarsigning.md). |
-|                      modLanguage |       String       |     "java"     | The programming language the mod is written in. Can be either `"java"` or `"scala"`. |
+| clientSideOnly | boolean | false | 如果该值和 `serverSideOnly` 的值有任何一个设置为了 `true` 那么另一侧会挑过 jar 文件加载，不再加载 mod。如果该值和 `serverSideOnly` 值都设为了 `true` ，游戏会崩溃 |
+| serverSideOnly | boolean | false | 如果该值和 `clientSideOnly` 的值有任何一个设置为了 `true` 那么另一侧会挑过 jar 文件加载，不再加载 mod。如果该值和 `clientSideOnly` 值都设为了 `true` ，游戏会崩溃 |
+|        acceptedMinecraftVersions |       String       |       ""       | 该字段指定了 mod 可以在哪个范围内的 Minecraft 版本上运行。将字符串置空则会默认接受所有 Minecraft 版本 |
+|         acceptableRemoteVersions |       String       |       ""       | 指定了该 mod 可以接受的客户端所用的该 mod 的版本，将该字段置空 `""` 代表只接受当前 mod 的版本,设置为`"*"` 代表街接受所有版本|
+|           acceptableSaveVersions |       String       |       ""       | A version range specifying compatible save version information. If you follow an unusual version convention, use `SaveInspectionHandler` instead. |
+|           certificateFingerprint |       String       |       ""       | 前往 [jar signing](../concepts/jarsigning.md) 查看更详细的说明 |
+|                      modLanguage |       String       |     "java"     | 编写 mod 所使用的编程语言 `"java"` 或者 `"scala"`. |
 |               modLanguageAdapter |       String       |       ""       | Path to a language adapter for the mod. The class must have a default constructor and must implement `ILanguageAdapter`. If it doesn't, Forge will crash. If set, overrides `modLanguage`. |
 |                 canBeDeactivated |       boolean      |      false     | This is not implemented, but if the mod could be deactivated (e.g. a minimap mod), this would be set to `true` and the mod would [receive](../events/intro.md#creating-an-event-handler) `FMLDeactivationEvent` to perform cleanup tasks. |
 |                       guiFactory |       String       |       ""       | Path to the mod's GUI factory, if one exists. GUI factories are used to make custom config screens, and must implement `IModGuiFactory`. For an example, look at `FMLConfigGuiFactory`. |
-|                       updateJSON |       String       |       ""       | URL to an update JSON file. See [Forge Update Checker](autoupdate.md) |
+|                       updateJSON |       String       |       ""       | 更新所需要的 JSON 文件的地址。前往 [Forge 更新检查器](autoupdate.md) 查看更详细的信息 |
 
-<a name="version-ranges" style="color: inherit; text-decoration: inherit">\* All version ranges use the [Maven Version Range Specification](https://maven.apache.org/enforcer/enforcer-rules/versionRanges.html).</a>
+- 以上所有提到的有关版本范围的字段，例如 `acceptedMinecraftVersions` 等，都使用 [Maven 版本范围规范](https://maven.apache.org/enforcer/enforcer-rules/versionRanges.html)。
 
-You can find an example mod in the [Forge src download](https://files.minecraftforge.net/).
+你可以在之前下载的 Mdk 的 `src` 目录中找到一个示例 mod。
 
-Keeping Your Code Clean Using Sub-packages
-------------------------------------------
+## 使用子包使代码保持整洁
 
-Rather than clutter up a single class and package with everything, it is recommended you break your mod into subpackages.
+建议你将 mod 进行分解，将不同内容放置在不同的包内，而不是将所有的代码全部丢在一个 class 文件中。
 
-A common subpackage strategy has packages for `common` and `client` code, which is code that can be run on server/client and client, respectively. Inside the `common` package would go things like Items, Blocks, and Tile Entities (which can each in turn be another subpackage). Things like GUIs and Renderers would go inside the `client` package.
+一个通用的分包策略是将 mod 分为 `common` 和 `client` 两个包。`common` 内的内容为既运行在服务端也运行在客户端的代码，而 `client` 的内容为仅运行在客户端的代码。像物品，方块，实体（可以将每个实体各自分到一个子包内）我们通常放在 `common` 包内，而像图像渲染， UI 之类的代码放在 `client` 包内。
 
 !!! note
 
-    This package style is only a suggestion, though it is a commonly used style. Feel free to use your own packaging system.
+    这种分包风格只是一个种建议，是一个普遍使用的风格。你可以使用任何你觉得舒服的分包风格。
 
-By keeping your code in clean subpackages, you can grow your mod much more organically.
+将代码整洁的保存在不同的子包内，有利于你之后有组织的对 mod 进行拓展
 
-Class Naming Schemes
---------------------
+## 类命名方案
 
-A common class naming scheme allows easier deciphering of what a class is, and also makes it easier for someone developing with your mod to find things.
+一个通用的类命名方案可以让你轻松的描述该类所承担的工作，并且可以让其他开发者更方便的找到mod中对应的功能模块。
 
-For Example:
+例如：
 
-* An `Item` called `PowerRing` would be in an `item` package, with a class name of `ItemPowerRing`.
-* A `Block` called `NotDirt` would be in a `block` package, with a class name of `BlockNotDirt`.
-* Finally, a `TileEntity` for a block called `SuperChewer` would be a `tile` or `tileentity` package, with a class name of `TileSuperChewer`.
+- 一个名为 `PowerRing` 的 `Item` 类应当放在 `item` 包中，并且命名为 `ItemPowerRing`
+- 一个名为 `NotDirt` 的 `Block` 类应当放在 `block` 包中，并且命名为 `BlockNotDirt`
+- 一个名为 `SuperChewer` 的 `TileEntity` 类应当放在 `tile` 或 `tileentity` 包中，并且命名为 `TileSuperChewer`
 
-Prepending your class names with what *kind* of object they are makes it easier to figure out what a class is, or guess the class for an object.
+在类名面前写上该类的类名有利于猜测该类是什么或者是什么类型的
