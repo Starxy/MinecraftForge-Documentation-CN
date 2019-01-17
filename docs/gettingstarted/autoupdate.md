@@ -1,50 +1,50 @@
-Forge Update Checker
-====================
+# Forge 更新检查器
 
-Forge provides a very lightweight opt-in update-checking framework. All it does is check for updates, then show a flashing icon on the Mods button of the main menu and mod list if any mods have an available update, along with the respective changelogs. It *does not* download updates automatically.
+Forge 提供了一个轻量级的可选的更新检查框架。该框架只检查更新并且当 mod 有任何新版本时，在主菜单的 Mods 按钮上闪烁一个图标来提醒用户，并且提供一个 mod 更新列表和相应的更新日志。该框架*不会主动进行*mod 的自动更新下载
 
-Getting Started
----------------
+## 起步
 
-The first thing you want to do is specify the `updateJSON` parameter in your `@Mod` annotation. The value of this parameter should be a valid URL pointing to an update JSON file. This file can be hosted on your own web server, or on GitHub, or wherever you want, as long as it can be reliably reached by all users of your mod.
+首先你要完成的是为 `@Mod` 注解中的 `updateJSON` 参数指定相应的值。该参数的值应该是一个指向具有特定格式的含有更新信息的 JSON 文件的有效 URL 地址。只要你的 mod 用户能够稳定的访问到该文件，你可以将该文件托管在任何地方，比如你自己的 web 服务器、Github 之类。
 
-Update JSON format
-------------------
+## 更新 JSON 的格式
 
-The JSON itself has a relatively simple format, given as follows:
+该 JSON 文件格式相对比较简单，示例如下：
 
 ```Javascript
 {
   "homepage": "<homepage/download page for your mod>",
   "<mcversion>": {
-    "<modversion>": "<changelog for this version>", 
-    // List all versions of your mod for the given Minecraft version, along with their changelogs
+    "<modversion>": "<changelog for this version>",
+    // 列出对应该 Minecraft 版本的所有你的 mod 的版本，并且一同列出相应的更新日志。
     ...
   },
   ...
   "promos": {
     "<mcversion>-latest": "<modversion>",
-    // Declare the latest "bleeding-edge" version of your mod for the given Minecraft version
+    // 列出对应该 Minecraft 版本的你 mod 的最新构建版本
     "<mcversion>-recommended": "<modversion>",
     // Declare the latest "stable" version of your mod for the given Minecraft version
+    // 列出对应该 Minecraft 版本的你的 mod 的最新的稳定版本
     ...
   }
 }
 ```
 
-This is fairly self-explanatory, but some notes:
- 
-* The link under `homepage` is the link the user will be shown when the mod is outdated.
-* Forge uses an internal algorithm to determine whether one version String of your mod is "newer" than another. Most versioning schemes should be compatible, but see the `ComparableVersion` class if you are concerned about whether your scheme is supported. Adherence to [semantic versioning](https://semver.org/) is highly recommended.
-* The changelog string can be separated into lines using `\n`. Some prefer to include a abbreviated changelog, then link to an external site that provides a full listing of changes.
-* Manually inputting data can be chore. You can configure your `build.gradle` to automatically update this file when building a release, as Groovy has native JSON parsing support. Doing this is left as an exercise to the reader.
+上述文件的结构是非常清晰的，但是有几点需要注意：
 
-Two concrete examples can be seen here for [Charset](https://gist.githubusercontent.com/Meow-J/fe740e287c2881d3bf2341a62a7ce770/raw/bf829cdefc84344d86d1922e2667778112b845b1/update.json) and [Botania Unofficial](https://gist.githubusercontent.com/Meow-J/1299068c775c2b174632534a18b65fb8/raw/42c578cf2303aa76d8900f5fdc6366122549d2a8/update.json).
+- `homepage` 的链接应该是用户的 mod 版本落后之后所访问的
+- Forge 使用一个内部的算法来判断一个 mod 的版本是落后还是超前。该算法应该能适应大部分情况下的版本命名方式。但是如果你不清楚你的版本命名方式是否被支持，请参见 `ComparableVersion` 类查阅。强烈建议遵守 [语义化版本规则](https://semver.org/) 来对版本进行命名
+- 更新日志的字段可以用 `\n` 来分割成多行。有些人习惯在此处简写更新信息，然后链接到一个提供完整更新信息的外部网站
+- 手动对该文件进行编辑可能会非常繁琐，你可以通过对 `build.gradle` 文件进行配置来实现自动化，当每构建一个 release 版本的时候来更新该 JSON 文件。Groovy 原生支持 JSON 解析。该功能我们不提供实现，在此处留作一个练习给各位读者。
 
-Retrieving Update Check Results
--------------------------------
+你可以在 [Charset](https://gist.githubusercontent.com/Meow-J/fe740e287c2881d3bf2341a62a7ce770/raw/bf829cdefc84344d86d1922e2667778112b845b1/update.json) 和 [Botania Unofficial](https://gist.githubusercontent.com/Meow-J/1299068c775c2b174632534a18b65fb8/raw/42c578cf2303aa76d8900f5fdc6366122549d2a8/update.json) 参见具体的例子。
 
-You can retrieve the results of the Forge Update Checker using `ForgeVersion.getResult(ModContainer)`. The returned object has a field `status` which indicates the status of the version check.
-Example values: `FAILED` (the version checker couldn't connect to the URL provided), `UP_TO_DATE` (the current version is equal to or newer than the latest stable version), `OUTDATED` (there is a new stable version), `BETA_OUTDATED` (there is a new unstable version), or `BETA` (the current version is equal to or newer than the latest unstable version). The status will be `PENDING` if the result requested has not finished yet; in that case, you should try again in a little bit. 
-Otherwise, the returned object will also have the target version and any changelog lines, as specified in `update.json`.
-You can obtain your own `ModContainer` to pass to this method using `Loader.instance().activeModContainer()`, or any other mod's `ModContainer` using `Loader.instance().getIndexedModList().get(<modid>)`.
+译注：原文上述两个文件来自 gist 并且已经不能正常访问。
+
+## 获取更新检查结果
+
+你可以通过调用 `ForgeVersion.getResult(ModContainer)` 来获取到 Forge 更新检查器的结果。该方法返回一个包含 `status` 字段的对象，该字段代表了版本检查的状态。
+
+可能取到的值：`FAILED`（版本检查器不能与 URL 建立连接）、`UP_TO_DATA`（目前版本等于或高于最新的稳定版本）、`OUTDATED`（存在一个新的稳定版本）、`BETA_OUTDATED`（存在一个新的测试版本）、`BETA`（目前版本等于或高于最新的测试版本）。当结果请求尚未完成的时候该状态值将会为 `PENDING`，在这种情况下你应该在稍后重试。
+
+除此之外，返回的对象还会包含一个目标版本和定义在 `update.json` 之内的更新日志。你可以通过调用 `Loader.instance().activeModContainer()` 方法来获得你的 mod 的 `ModContainer`。 也可以通过调用 `Loader.instance().getIndexedModList().get(<modid>)` 来获得其他任何 mod 的`ModContainer`。
