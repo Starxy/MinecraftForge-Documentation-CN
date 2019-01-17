@@ -1,6 +1,7 @@
 {
     "markdownlint.config": {
-        "MD007": {"indent": 4},
-        "MD029": false //due to sometimes order doesn't start as one
+        "MD007": {"indent": 4}, // 属于个人编码习惯，缩进由四个空格控制
+        "MD029": false, // 原文可能会产生一些序号不从 1 开始的段落
+        "MD033": {"allowed_elements": []} //请尽最大可能不要在 Markdown 中嵌套 HTML 标记，即便是有些不方便实现的文本请寻找插件、更改原文格式、添加外部引用。如果必加不可请开 issue 进行必要性讨论
     }
 }
