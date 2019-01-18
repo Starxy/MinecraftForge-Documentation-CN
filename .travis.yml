@@ -9,7 +9,6 @@ install:
 
 script: 
   - mkdocs gh-deploy --force
-  - git fetch origin gh-pages:gh-pages
   - git push --force "https://Starxy:${CODING_TOKEN}@git.coding.net/Starxy/MinecraftForge-Documentation-CN.git" gh-pages:master
 
 branches:
