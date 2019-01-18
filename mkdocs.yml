@@ -8,7 +8,7 @@ nav:
     - Forge 更新检查器: 'gettingstarted/autoupdate.md'
     - 依赖管理: 'gettingstarted/dependencymanagement.md'
     - 调试分析器: 'gettingstarted/debugprofiler.md'
-  - Concepts:
+  - 概念:
     - Sides: 'concepts/sides.md'
     - Resources: 'concepts/resources.md'
     - Registries: 'concepts/registries.md'
@@ -76,6 +76,7 @@ nav:
 
 # Do not edit in PRs below here
 site_name: Forge 中文文档
+site_url: https://coding.starxy.cc/
 
 markdown_extensions:
   - admonition

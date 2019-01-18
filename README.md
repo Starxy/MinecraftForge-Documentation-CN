@@ -1,6 +1,11 @@
 # Minecraft Forge Documentation
 
-这里是 Minecraft Forge **官方文档的非官方中文翻译**。由 Mkdocs 进行构建，由 github page 进行部署。[查看文档](https://starxy.github.io/MinecraftForge-Documentation-CN/)
+这里是 Minecraft Forge **官方文档的非官方中文翻译**。由 Mkdocs 进行构建。
+
+网站同步部署在 Github Page 和 Coding Page 服务上。二者内容上没有任何区别。请根据个人网络状态选择访问
+
+- [Github Page 部署](https://starxy.github.io/MinecraftForge-Documentation-CN/)
+- [Coding Page 部署](https://coding.starxy.cc)
 
 英文的文档可以在这里找到: [http://mcforge.readthedocs.io/](http://mcforge.readthedocs.io/)。
 
@@ -10,7 +15,7 @@
 
 本文档的目标是给予使用 Forge 开发的 mod 一个有组织的并且明确的参考资料。这并不是一个 Java 语言的教程，而且 Java 的基本概念也不应该是本文档的一部分。
 
-本文档目前处在翻译阶段，非常欢迎提交 PR 来对翻译做出贡献。为了保证翻译工作不会产生重复，可以在开始翻译前在 issue讨论，进行翻译章节的认领。同时也非常欢迎任何时间点对已翻译文本的建议和校对工作。
+本文档目前处在翻译阶段，非常欢迎提交 PR 来对翻译做出贡献。为了保证翻译工作不会产生重复，可以在开始翻译前在 issue 讨论，进行翻译章节的认领。同时也非常欢迎任何时间点对已翻译文本的建议和校对工作。
 
 文档全文翻译完成后会进行相对于原仓库同步的更新。保证文档的时效性。
 
