@@ -6,10 +6,11 @@ python:
 install:
   - pip install mkdocs
   - pip install -r python-requirements.txt
-  - echo -e "machine github.com\n  login ${GITHUB_TOKEN}" > ~/.netrc
 
 script: 
-  - mkdocs gh-deploy --force --clean
+  - mkdocs gh-deploy --force
+  - git fetch origin gh-pages:gh-pages
+  - git push --force "https://Starxy:${CODING_TOKEN}@git.coding.net/Starxy/MinecraftForge-Documentation-CN.git" gh-pages:master
 
 branches:
   only:
