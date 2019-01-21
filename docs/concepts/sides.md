@@ -1,57 +1,62 @@
-Sides in Minecraft
-===================
+# Minecraft 中 Side 的概念
 
-A very important concept to understand when modding Minecraft are the two sides: *client* and *server*. There are many, many common misconceptions and mistakes regarding siding, which can lead to bugs that might not crash the game, but can rather have unintended and often unpredictable effects.
+想要进行 mod 开发，理解 Side 的概念是非常重要的，Minecraft 中存在两种 side，一个为 *客户端（client）*，另一个位 *服务端（server）*。事实上关于 side 有很多误导性的概念和错误，对该概念理解错误可能会导致许多 bug，虽然不会导致游戏崩溃但是会产生一系列意想不到的影响。
 
-Different Kinds of Sides
-------------------------
+## 不同 Side 的区别
 
-When we say "client" or "server", it usually follows with a fairly intuitive understanding of what part of the game we're talking about. After all, a client is what the user interacts with, and a server is where the user connects for a multiplayer game. Easy, right?
+当我们谈及到 「client」 或者 「server」，通常我们都能明白我们在谈论游戏的哪一部分：客户端是用来与用户交互的内容，而服务端是让用户连接来进行多人游戏的地方。
 
-As it turns out, there can be some ambiguity even with two such terms. Here we disambiguate the four possible meanings of "client" and "server":
+事实上，即便是有这两个概念如此清晰，还是有一些表述不清的地方。为了消除歧义，我们这里对客户端和服务端四种不同的情况进行详细讨论
 
-* Physical client - The *physical client* is the entire program that runs whenever you launch Minecraft from the launcher. All threads, processes, and services that run during the game's graphical, interactable lifetime are part of the physical client.
-* Physical server - Often known as the dedicated server, the *physical server* is the entire program that runs whenever you launch any sort of `minecraft_server.jar` that does not bring up a playable GUI.
-* Logical server - The *logical server* is what runs game logic: mob spawning, weather, updating inventories, health, AI, and all other game mechanics. The logical server is present within the physical server, but is also can run inside a physical client together with a logical client, as a single player world. The logical server always runs in a thread named the `Server Thread`.
-* Logical client - The *logical client* is what accepts input from the player and relays it to the logical server. In addition, it also receives information from the logical server and makes it available graphically to the player. The logical client runs in the `Client Thread`, though often several other threads are spawned to handle things like audio and chunk render batching.
+- 物理客户端（Physical client）：物理客户端是整个用于运行 Minecraft 游戏的应用程序。在游戏运行过程中，所有的线程、进程、服务都是物理客户端的一部分。
+- 物理服务端（Physical server）：我们常说的物理服务端通常指的是专用服务器（dedicated server）。物理服务端是用于运行 `minecraft_server.jar` 的应用程序，该程序没有可视化的 GUI。
+- 逻辑服务端（Logical server）：逻辑服务端通常指的是运行游戏逻辑的地方，包括怪物生成、天气、背包更新、生命值、AI 等之类的游戏机制。逻辑服务端存在于物理服务器中，但也可以和逻辑客户端一起一同运行在一个单人游戏的物理客户端上。逻辑服务器总会运行在一个名为 `Server Thread` 的线程上。
+- 逻辑客户端（Logical client）：逻辑客户端用来接收用户输入并将输入传达给逻辑服务端。除此之外，逻辑客户端还从逻辑服务端中接受数据并将这些数据转为换可以被玩家接受的画面和信息。逻辑客户端运行在 `Client Thread` 线程上，当然也存在一些其他专门用于处理音频和区块加载的线程。
 
-Performing Side-Specific Operations
------------------------------------
+## 执行特定端（Side-Specific）的操作
 
 ### `world.isRemote`
 
-This boolean check will be your most used way to check sides. Querying this field on a `World` object establishes the  **logical** side the world belongs to. That is, if this field is `true`, the world is currently running on the logical client. If the field is `false`, the world is running on the logical server. It follows that the physical server will always contain `false` in this field, but we cannot assume that `false` implies a physical server, since this field can also be `false` for the logical server inside a physical client (in other words, a single player world).
+<!-- !!! 译注
+    刚接触该字段的时候可能会对 `isRemote` 有所疑惑，这里可以将逻辑服务端所在的地方理解为 `Local`，这样的话该布尔值的真假就易于理解了。毕竟 mod 的逻辑总是运行在逻辑服务端里的。如果世界运行在逻辑客户端，与 mod 所在的逻辑服务端相比该值就应该为 `true` 即 Remote 了。 -->
 
-Use this check whenever you need to determine if game logic and other mechanics should be run. For example, if you want to damage the player every time they click your block, or have your machine process dirt into diamonds, you should only do so after ensuring `world.isRemote` is `false`. Applying game logic to the logical client can cause desynchronization (ghost entities, desynchronized stats, etc.) in the lightest case, and crashes in the worst case.
+对该布尔类型的字段检查是你之后最常用的检查 side 的方法。查询 `World` 对象的该字段可以得知当前游戏正处在的**逻辑端**。比如，如果该字段值为 `true`，当前世界运行在一个逻辑客户端上；如果该字段为 `false` ，当前世界运行在一个逻辑服务端上。并且，在物理服务端上该字段的值总是为 `false` 但是你不能假定值为 `false` 的时候意味着当前世界运行在物理服务端上，因为在物理客户端上的逻辑服务端（即单人游戏）该值也可以为 `false`。
 
-This check should be used as your go-to default. Aside from proxies, rarely will you need the other ways of determining side and adjusting behavior.
+当你需要确定是否需要运行某项游戏逻辑或机制时，请检查该值。例如，如果你想对任何破坏你的方块的玩家造成伤害，或者你想创造一个将泥土加工成钻石的机器，你需要保证 `world.isRemote` 的值为 `false` 的情况下再进行这些逻辑的处理。将游戏逻辑在逻辑客户端加载轻则造成游戏不同步（幽灵实体，不同步的状态等等），重则会导致游戏崩溃
+
+这个检查方法应当是你优先考虑的。除了 proxy 之外你很少再需要其他之外的方法来调整 siede 的行为状态。
 
 ### `@SidedProxy`
 
-Considering the use of a single "universal" jar for client and server mods, and the separation of the physical sides into two jars, an important question comes to mind: How do we use code that is only present on one physical side? All code in `net.minecraft.client` is only present on the physical client, and all code in `net.minecraft.server.dedicated` is only present on the physical server. If any class you write references those names in any way, they will crash the game when that respective class is loaded in an environment where those names do not exist. A very common mistake in beginners is to call `Minecraft.getMinecraft().<doStuff>()` in block or tile entity classes, which will crash any physical server as soon as the class is loaded.
+考虑到我们在客户端和服务端都用一个通用的 jar 文件，并且物理客户端和物理服务端单独加载各自的 mod jar 文件，由此引出了一个重要的问题，怎样使用仅存在物理端方面的代码？所有在 `net.minecraft.client` 包里面的代码都只应用在物理客户端，所有在 `net.minecraft.server.dedicated` 包里的代码都只应用在物理服务端。当你写的任何类引用了一些类和方法，但是游戏运行家在该类时当前环境中不存在引用的类和方法时，会引起游戏崩溃。初学者常犯的错误是，在一个 block 或 title entity 类中调用 `Minecraft.getMinecraft().<doStuff>()` 该代码会让任何尝试加载该类的物理服务端崩溃。
 
-How do we resolve this? Luckily, FML provides us with a `@SidedProxy` annotation. We supply it the names of two classes (one for `serverSide`, one for `clientSide`), and decorate a field with this annotation. When the mod starts, FML will instantiate one of the two classes based on the **physical** side.
+所以我们应该怎样解决这个问题？幸运的是，FML 提供了一个 `@sideProxy` 注解。该注解用来指定两个类的路径，一个是 `serverSide`，一个是 `clientSide`，并且用该注解来注释一个类内的字段。当 mod 启动时，fml 会根据当前所处的**物理侧**来实例化两个类中的其中一个。
+
+```java
+@SidedProxy(clientSide="com.xray.common.proxy.ClientProxy", serverSide="com.xray.common.proxy.ServerProxy")
+private static ClientProxy proxy;
+```
 
 !!! note
 
-    It is important to understand that FML picks the proxy to instantiate based on the **physical** side. A single player world (logical server + logical client within a physical client) will still have a proxy of the type you specify in `clientSide`!
+    理解 FML 是基于物理端来挑选相应的 proxy 类来实例化是非常重要的。一个单人游戏世界（逻辑服务端和逻辑客户端同在一个物理客户端中）会有一个位于 `clientSide` 的 proxy 类被实例化。
 
-A common use case is to register renderers and models, something which must be called from the main initialization methods `preInit`, `init`, or `postInit`. However, many rendering related classes and registries are not present on the physical server and may crash it. Therefore, we put these actions into the client proxy, ensuring that they will always execute for the physical client.
+该方法常被用来注册渲染器（Renderers）和模型（Models），它们必须在主要的初始化方法 `preInit`、`init` 或 `postInit` 中调用。然而与图像渲染有关的方法在物理服务端上都不存在并且调用会引起崩溃。因此，我们应该将这些方法只放在客户端的 proxy 中，保证他们只在客户端中运行。
 
-Remember that both of your specified proxies must have a type that is assignable into the field you annotate with `@SidedProxy`. A common pattern, but by no means the only strategy, is to have an interface `IProxy` as the field type, and then have two implementations, `ClientProxy` and `ServerProxy` for the two corresponding physical sides.
+请记住，两个指定的代理必须具有可被分配到使用 `@SidedProxy` 字段的类型。一个通用的模式但不绝对的的模式是为该字段的类型指定为一个 `IProxy` 接口，并且不同的物理端添加 `ClientProxy` 和 `ServerProxy` 实现类。
 
 ### `getEffectiveSide`
 
-`FMLCommonHandler.getEffectiveSide()` can be called in order to retrieve the **logical** side when you do not have access to a `World` object to check `isRemote`. It *guesses* which logical side you are on by looking at the name of the currently running thread. Because it is a guess, this method should only be used when other options have been exhausted. In nearly every case, you should prefer checking `world.isRemote` to this method call.
+当你没办法获得 `World` 对象的 `isRemote` 属性时，你可以调用 `FMLCommonHandler.getEffectiveSide()` 方法来获得代码运行所处的**逻辑端**。这个方法通过检查当前程序所处的线程的名字来*猜测*当前所处的 side。因此该方法只能够在其他方法不可用的时使用，谨记无论如何请将检查 `world.isRemote` 作为查询 side 的首要方法。
 
 ### `getSide` and `@SideOnly`
 
-`FMLCommonHandler.getSide()` can be called in order to retrieve the **physical** side your code is running on. Since it is determined at startup, it does not rely on guessing to return its result. The number of use cases for this method is limited, however.
+你可以通过调用 `FMLCommonHandler.getSide()` 方法来获得代码运行所在的**物理端**。由于物理端在程序启动的时候就决定下来了，因此该方法的返回值是准确的，不需要猜测。但是该方法的使用情况很少。
+
 
 Annotating a method or field with the `@SideOnly` annotation indicates to the loader that the respective member should be completely stripped out of the definition not on the specified **physical** side. Usually, these are only seen when browsing through the decompiled Minecraft code, indicating methods that the Mojang obfuscator stripped out. There is little to no reason for using this annotation directly. Only use it if you are overriding a vanilla method that already has `@SideOnly` defined. In most other cases where you need to dispatch behavior based on physical sides, use `@SidedProxy` or a check on `getSide()` instead.
 
-Common Mistakes
----------------
+## 常见错误
 
 ### Reaching Across Logical Sides
 
