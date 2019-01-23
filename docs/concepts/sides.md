@@ -49,19 +49,18 @@ private static ClientProxy proxy;
 
 当你没办法获得 `World` 对象的 `isRemote` 属性时，你可以调用 `FMLCommonHandler.getEffectiveSide()` 方法来获得代码运行所处的**逻辑端**。这个方法通过检查当前程序所处的线程的名字来*猜测*当前所处的 side。因此该方法只能够在其他方法不可用的时使用，谨记无论如何请将检查 `world.isRemote` 作为查询 side 的首要方法。
 
-### `getSide` and `@SideOnly`
+### `getSide` 和 `@SideOnly`
 
 你可以通过调用 `FMLCommonHandler.getSide()` 方法来获得代码运行所在的**物理端**。由于物理端在程序启动的时候就决定下来了，因此该方法的返回值是准确的，不需要猜测。但是该方法的使用情况很少。
 
-
-Annotating a method or field with the `@SideOnly` annotation indicates to the loader that the respective member should be completely stripped out of the definition not on the specified **physical** side. Usually, these are only seen when browsing through the decompiled Minecraft code, indicating methods that the Mojang obfuscator stripped out. There is little to no reason for using this annotation directly. Only use it if you are overriding a vanilla method that already has `@SideOnly` defined. In most other cases where you need to dispatch behavior based on physical sides, use `@SidedProxy` or a check on `getSide()` instead.
+使用 `@SideOnly` 注解来注释一个方法或字段用来告知加载器 the respective member should be completely stripped out of the definition not on the specified **physical** side。通常来说，这些注解通常只在反编译后的 Minecraft 代码中出现，用来标示 Mojang 混淆器剥离出来的方法。这些注解不应该在编码中主动使用，除非你想去主动重写已经使用 `@SideOnly` 标记的原版方法，其他大部分情况下使用 `@SidedProxy` 或者检查 `getSide()` 方法来检查物理端。
 
 ## 常见错误
 
-### Reaching Across Logical Sides
+### 跨逻辑端访问
 
-Whenever you want to send information from one logical side to another, you must **always** use network packets. It is incredibly tempting, when in a single player scenario, to directly transfer data from the logical server to the logical client.
+无论何时你想从一个逻辑端发送信息到另一个逻辑端，你**必须通过**发送网络包（network packets）来完成。尽管单人模式下直接在逻辑服务器和逻辑客户端之间交换数据看起来非常方便，但这不是一个好的方法。
 
-This is actually very commonly inadvertently done through static fields. Since the logical client and logical server share the same JVM in a single player scenario, both threads writing to and reading from static fields will cause all sorts of race conditions and the classical issues associated with threading.
+这主要是由不经意间的静态字段访问造成的。由于逻辑客户端和逻辑服务端在单人模式中共用同一个 JVM，两个线程对静态变量进行读写操作可能会导致竞争，还会产生一些经典的线程问题。
 
-This mistake can also be made explicitly by accessing physical client-only classes such as `Minecraft` from common code that runs or can run on the logical server. This mistake is easy to miss for beginners, who debug in a physical client. The code will work there, but will immediately crash on a physical server.
+在 common 包内运行在逻辑服务端上的代码访问只能在物理客户端加载的类比如 `Minecraft` 也会导致此类错误。由于新手经常只在物理客户端上进行调试，所以经常会忽视导致物理客户端崩溃的一些错误。
