@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forge Blockstate JSON - Forge 中文文档</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_manifest.json">
+    <link rel="mask-icon" href="../../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css">
+    <link rel="stylesheet" href="../../../css/styles_dark.css?version=1" data-theme="dark">
+    <link rel="stylesheet" href="../../../css/styles_light.css?version=1" data-theme="light">
+
+    
+    <script type="text/javascript" src="../../../js/theme-switch.js"></script>
+    
+    <script type="text/javascript" src="../../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../../js/theme.js"></script>
+
+    <script>var base_url = '../../..';</script>
+    
+    <script src="../../../search/main.js"></script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../../.." class="logo-image"><img src="../../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="http://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+        
+        <form class="search" action="../../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <h2><a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> 导航</h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+<li >
+    
+    <a href="../../../" class="elem-text">主页</a>
+    
+    
+</li>
+
+                    
+                    
+<li >
+    
+    <a href="../../../styleguide/" class="elem-text">文档编写样式说明</a>
+    
+    
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 起步</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../../gettingstarted/" class="elem-text">概述</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../gettingstarted/structuring/" class="elem-text">Mod 文件结构</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../gettingstarted/autoupdate/" class="elem-text">Forge 更新检查器</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../gettingstarted/dependencymanagement/" class="elem-text">依赖管理</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../gettingstarted/debugprofiler/" class="elem-text">调试分析器</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 概念</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../../concepts/sides/" class="elem-text">Sides</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../concepts/resources/" class="elem-text">Resources</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../concepts/registries/" class="elem-text">Registries</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../concepts/jarsigning/" class="elem-text">The Fingerprint Violation Event</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../concepts/internationalization/" class="elem-text">Internationalization and localization</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blocks</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../../blocks/blocks/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../blocks/states/" class="elem-text">Intro to Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../blocks/interaction/" class="elem-text">Interaction</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Animation API</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../../animation/intro/" class="elem-text">Intro to the Animation API</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../animation/armature/" class="elem-text">Armatures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../animation/asm/" class="elem-text">Animation State Machines</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../animation/implementing/" class="elem-text">Using the API</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Tile Entities</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../../tileentities/tileentity/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../tileentities/tesr/" class="elem-text">Special Renderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Items</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../../items/items/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../items/loot_tables/" class="elem-text">Loot Tables</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Models</a>
+    
+    <ul class="nav-collapsible nav-collapsible-open">
+        
+        
+<li >
+    
+    <a href="../../../models/introduction/" class="elem-text">Intro to Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../models/files/" class="elem-text">Model Files</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blockstates</a>
+    
+    <ul class="nav-collapsible nav-collapsible-open">
+        
+        
+<li >
+    
+    <a href="../../../models/blockstates/introduction/" class="elem-text">Intro to Blockstate JSONs</a>
+    
+    
+</li>
+
+        
+        
+<li  class="elem-active elem-toc" >
+    
+    <a href="../../../#forges-blockstates" class="elem-text">Forge Blockstate JSON</a>
+    
+    
+    <ul class="table-of-contents">
+        
+        
+        
+        <li class="toc-subitem"><a href="#general-structure-of-the-format">General Structure of the Format</a></li>
+        
+        <li class="toc-subitem"><a href="#sub-models">Sub-Models</a></li>
+        
+        
+    </ul>
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../models/using/" class="elem-text">Connecting Blocks and Items to Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../models/color/" class="elem-text">Coloring Textures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../models/overrides/" class="elem-text">Item Property Overrides</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Advanced Models</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../../models/advanced/introduction/" class="elem-text">Intro to Advanced Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../models/advanced/imodel/" class="elem-text">IModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../models/advanced/imodelstate+part/" class="elem-text">IModelState and IModelPart</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../models/advanced/ibakedmodel/" class="elem-text">IBakedModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../models/advanced/extended-blockstates/" class="elem-text">Extended Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../models/advanced/perspective/" class="elem-text">Perspective</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../models/advanced/itemoverridelist/" class="elem-text">ItemOverrideList</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../models/advanced/icustommodelloader/" class="elem-text">ICustomModelLoader</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Rendering</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../../rendering/teisr/" class="elem-text">TileEntityItemStackRenderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Events</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../../events/intro/" class="elem-text">Basic Usage</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Networking</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../../networking/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../networking/overview/" class="elem-text">Overview</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../networking/simpleimpl/" class="elem-text">SimpleImpl</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Data Storage</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../../datastorage/capabilities/" class="elem-text">Capabilities</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../datastorage/worldsaveddata/" class="elem-text">World Saved Data</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../datastorage/extendedentityproperties/" class="elem-text">Extended Entity Properties</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../config/annotations/" class="elem-text">Config Annotations</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Utilities</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../../utilities/recipes/" class="elem-text">Recipes</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../utilities/oredictionary/" class="elem-text">OreDictionary</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../utilities/permissionapi/" class="elem-text">PermissionAPI</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Effects</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../../effects/sounds/" class="elem-text">Sounds</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Conventions</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../../conventions/versioning/" class="elem-text">Versioning</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../conventions/locations/" class="elem-text">Locations</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../conventions/loadstages/" class="elem-text">Loading Stages</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Contributing to Forge</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../../forgedev/" class="elem-text">Getting Started</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../../forgedev/prguidelines/" class="elem-text">PR Guidelines</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="forges-blockstates">Forge&rsquo;s Blockstates<a class="headerlink" href="#forges-blockstates" title="Permanent link"> </a></h1>
+<p>Forge has its own blockstate json format to accommodate for modders needs. It introduces submodels, which allows you to build the final blockstate from different parts.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Note that all models and textures referenced are from vanilla minecraft. For your own mod, you have to use the full location! For example: <code>"mymod:blocks/blockTexture"</code>.</p>
+<p>You don&rsquo;t have to use Forge&rsquo;s blockstate format at all, you can also use the vanilla format!</p>
+</div>
+<h2 id="general-structure-of-the-format">General Structure of the Format<a class="headerlink" href="#general-structure-of-the-format" title="Permanent link"> </a></h2>
+<pre class="highlight"><code class="language-json">{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "all": "blocks/dirt"
+    },
+    "model": "cube_all",
+    "uvlock": true
+  },
+  "variants": {
+    "normal": [{}]
+  }
+}</code></pre>
+
+<p>This json declares a simple blockstate that has dirt on each side. Let&rsquo;s go through it step by step.</p>
+<pre class="highlight"><code class="language-json">  "forge_marker": 1,</code></pre>
+
+<p>This tells the game that the blockstate json is the one from Forge, not from vanilla Minecraft.
+The 1 is the version of the format, which ensures that old blockstate JSONs can be supported should the format ever change. Currently there is only this one.</p>
+<pre class="highlight"><code class="language-json">  "defaults": {
+    "textures": {
+      "all": "blocks/dirt"
+    },
+    "model": "cube_all",
+    "uvlock": true
+  }</code></pre>
+
+<p>The defaults section contains the default values for all variants. They can be overwritten by the variants. The defaults section is <strong>optional</strong>! You do not need to define defaults, the block can be omitted altogether.</p>
+<pre class="highlight"><code class="language-json">  "variants": {
+    "normal": [{}]
+  }</code></pre>
+
+<p>This defines all variants for the block. The simple dirt block only has its default, the <em>normal</em> variant. It does not contain any additional information in this case. Everything that is defined in defaults could also be defined here. For example:</p>
+<pre class="highlight"><code class="language-json">  "normal": [{
+    "textures": {
+      "side": "blocks/cobblestone",
+      "end": "blocks/dirt"
+    },
+    "model": "cube_column"
+  }]</code></pre>
+
+<p>This normal variant would use the <em>cube_column</em> model with cobblestone on the sides and dirt on top and bottom.</p>
+<p>An entry in the <code>variants</code> section either defines a <a href="../../../blocks/states/">blockstate</a> property or a plain variant. A property definition is of the form:</p>
+<pre class="highlight"><code class="language-json">    "variants": {
+      "property_name": {
+        "value0": {},
+        "value1": {},
+        "__comment": "Etc."
+      }
+   }</code></pre>
+
+<p>A given blockstate can have any number of these. When the blockstate is loaded, the values within each property are used to create all possible variants for the block. The above would create two variants, <code>property_name=value0</code> and <code>property_name=value1</code>. If there were two properties, it would create variants <code>prop1=value11,prop2=value21</code>, <code>prop1=value12,prop2=value21</code>, <code>prop1=value11,prop2=value22</code>, and so on (where the property names are sorted alphabetically). Each such variant is the union of all the variant definitions that went into it. For example, given:</p>
+<pre class="highlight"><code class="language-json">{
+  "forge_marker": 1,
+  "variants": {
+    "shiny": {
+      "true":  { "textures": { "all": "some:shiny_texture" } },
+      "false": { "textures": { "all": "some:flat_texture"  } }
+    },
+    "broken": {
+      "true":  { "model": "some:broken_model" },
+      "false": { "model": "some:intact_model" }
+    }
+ }
+}</code></pre>
+
+<p>The variant &ldquo;broken=false,shiny=true&rdquo; takes the &ldquo;some:intact_model&rdquo; from <code>variants.broken.true.model</code>, and the <code>some:shiny_texture</code> from <code>variants.shiny.true.textures</code>.</p>
+<p>An entry can also be a plain variant, like:</p>
+<pre class="highlight"><code class="language-json">    "variants": {
+      "normal": { "model": "some:model" }
+    }</code></pre>
+
+<p>This kind of definition defines a variant &ldquo;normal&rdquo; directly, without forming combinations with those listed in the property-value format. It still inherits from a &ldquo;defaults&rdquo; block, if present, and if the property-value formatted variants generate a variant with the same name, the directly defined variant combines with and overrides values from it. If the variant is defined as a list, then each element is a variant definition, and the one that will be used is random:</p>
+<pre class="highlight"><code class="language-json">    "defaults": { "model": "some:model" }
+    "variants": {
+      "__comment": "When used, the model will have a 75% chance of being rotated.",
+      "normal": [{ "y": 0 }, { "y": 90 }, { "y": 180 }, { "y": 270 }]
+    }</code></pre>
+
+<p>A property definition is disambiguated from a straight variant by the type of the first entry. If the first entry of <code>variants.&lt;something&gt;</code> is an object, then it is a property definition. If it is anything else, it is a straight variant. In order to avoid mixups, it is recommended to wrap straight variants in a list with one element:</p>
+<pre class="highlight"><code class="language-json">   "variants": {
+     "simple": [{
+       "custom": {},
+       "model": "some:model",
+       "__comment": "Without the list, the custom: {} would make Forge think this was a property definition."
+     }]
+   }</code></pre>
+
+<h2 id="sub-models">Sub-Models<a class="headerlink" href="#sub-models" title="Permanent link"> </a></h2>
+<p>To show the use of submodels we will create a model that has different variants. Each variant will use submodels to create a different model.
+The model will be a pressure plate, and depending on its state it will have parts added to it.</p>
+<pre class="highlight"><code class="language-json">{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "texture": "blocks/planks_oak",
+      "wall": "blocks/planks_oak"
+    },
+    "model": "pressure_plate_up",
+    "uvlock": true
+  },
+  "variants": {
+    "__comment": "mossy is a boolean property.",
+    "mossy": {
+      "true": {
+        "__comment": "If true it changes the pressure plate from oak planks to mossy cobble.",
+        "textures": {
+          "texture": "blocks/cobblestone_mossy"
+        }
+      },
+      "false": {
+        "__comment": "Change nothing. The entry has to be here so the Forge blockstate loader knows to generate this variant."
+      }
+    },
+    "__comment": "pillarcount is a property that determines how many pillar submodels we have. Ranges from 0 to 2.",
+    "pillarcount": {
+      "0": {
+        "__comment": "No pillar. Remember, this empty definition has to be here."
+      },
+      "1": {
+        "__comment": "If it is true, it will add the wall model and combine it with the pressure plate.",
+        "submodel": "wall_n"
+      },
+      "2": {
+        "textures": {
+          "wall": "blocks/cobblestone"
+        },
+        "submodel": {
+          "pillar1": { "model": "wall_n" },
+          "pillar2": { "model": "wall_n", "y": 90 }
+        }
+      }
+    }
+  }
+}</code></pre>
+
+<p>The comments already explain the details on the separate parts, but here&rsquo;s how it works overall: The block definition in code has two properties. One boolean property named <code>mossy</code> and one integer property named <code>pillarCount</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notice here that the string used in the json is <strong>lowercase</strong>. It has to be lowercase or it won&rsquo;t be found.</p>
+</div>
+<p>Instead of defining &ldquo;this combination of properties gives model X&rdquo; we say &ldquo;<strong>this</strong> value for this property has <strong>that</strong> impact on the model&rdquo;. In this example it&rsquo;s quite straight forward:</p>
+<ul>
+<li>If <code>mossy</code> is <code>true</code>, the pressure plate uses the mossy cobblestone texture</li>
+<li>If <code>pillarCount</code> is <code>1</code> it will add one wall with connection facing north. The default texture for the wall is oak-planks.</li>
+<li>If <code>pillarCount</code> is <code>2</code> it will add two walls, both facing north. However the second wall will be rotated by 90 degree. This showcases that you do not need separate model with Forge&rsquo;s system. You only need once and rotate it around the Y axis. Additionally the texture of the walls is changed to cobblestone.</li>
+<li>If <code>pillarCount</code> is <code>0</code> no walls will be added.</li>
+</ul>
+<p>And here is the result of our work:</p>
+<p><img alt="The model in different variations" src="../example.png" /></p>
+            
+        </article>
+        
+        <div class="docs-entry-footer-buttons" role="navigation" aria-label="footer navigation">
+            
+            <a href="../../../models/blockstates/introduction/" title="Intro to Blockstate JSONs" class="btn"><span class="fa fa-arrow-left"></span> Previous</a>
+            
+            
+            <a href="../../../models/using/" title="Connecting Blocks and Items to Models" class="float-right btn">Next <span class="fa fa-arrow-right"></span></a>
+            
+        </div>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme. Hosted by <a href="https://readthedocs.org">Read the Docs</a>.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

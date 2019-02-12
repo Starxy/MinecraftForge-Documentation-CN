@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Forge 中文文档</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_manifest.json">
+    <link rel="mask-icon" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css">
+    <link rel="stylesheet" href="../../css/styles_dark.css?version=1" data-theme="dark">
+    <link rel="stylesheet" href="../../css/styles_light.css?version=1" data-theme="light">
+
+    
+    <script type="text/javascript" src="../../js/theme-switch.js"></script>
+    
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../js/theme.js"></script>
+
+    <script>var base_url = '../..';</script>
+    
+    <script src="../../search/main.js"></script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../.." class="logo-image"><img src="../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="http://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+        
+        <form class="search" action="../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <h2><a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> 导航</h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+<li >
+    
+    <a href="../../" class="elem-text">主页</a>
+    
+    
+</li>
+
+                    
+                    
+<li >
+    
+    <a href="../../styleguide/" class="elem-text">文档编写样式说明</a>
+    
+    
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 起步</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/" class="elem-text">概述</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/structuring/" class="elem-text">Mod 文件结构</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/autoupdate/" class="elem-text">Forge 更新检查器</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/dependencymanagement/" class="elem-text">依赖管理</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/debugprofiler/" class="elem-text">调试分析器</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 概念</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../concepts/sides/" class="elem-text">Sides</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/resources/" class="elem-text">Resources</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/registries/" class="elem-text">Registries</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/jarsigning/" class="elem-text">The Fingerprint Violation Event</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/internationalization/" class="elem-text">Internationalization and localization</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blocks</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../blocks/blocks/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../blocks/states/" class="elem-text">Intro to Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../blocks/interaction/" class="elem-text">Interaction</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Animation API</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../animation/intro/" class="elem-text">Intro to the Animation API</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/armature/" class="elem-text">Armatures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/asm/" class="elem-text">Animation State Machines</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/implementing/" class="elem-text">Using the API</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Tile Entities</a>
+    
+    <ul class="nav-collapsible nav-collapsible-open">
+        
+        
+<li  class="elem-active elem-toc" >
+    
+    <a href="../../#tileentities" class="elem-text">Home</a>
+    
+    
+    <ul class="table-of-contents">
+        
+        
+        
+        <li class="toc-subitem"><a href="#creating-a-tileentity">Creating a TileEntity</a></li>
+        
+        <li class="toc-subitem"><a href="#attaching-a-tileentity-to-a-block">Attaching a TileEntity to a Block</a></li>
+        
+        <li class="toc-subitem"><a href="#storing-data-within-your-tileentity">Storing Data within your TileEntity</a></li>
+        
+        <li class="toc-subitem"><a href="#keeping-a-tileentity-through-changing-blockstates">Keeping a TileEntity through changing BlockStates</a></li>
+        
+        <li class="toc-subitem"><a href="#ticking-tileentities">Ticking TileEntities</a></li>
+        
+        <li class="toc-subitem"><a href="#synchronizing-the-data-to-the-client">Synchronizing the Data to the Client</a></li>
+        
+        
+    </ul>
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../tileentities/tesr/" class="elem-text">Special Renderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Items</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../items/items/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../items/loot_tables/" class="elem-text">Loot Tables</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Models</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/introduction/" class="elem-text">Intro to Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/files/" class="elem-text">Model Files</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blockstates</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/blockstates/introduction/" class="elem-text">Intro to Blockstate JSONs</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/blockstates/forgeBlockstates/" class="elem-text">Forge Blockstate JSON</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/using/" class="elem-text">Connecting Blocks and Items to Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/color/" class="elem-text">Coloring Textures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/overrides/" class="elem-text">Item Property Overrides</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Advanced Models</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/advanced/introduction/" class="elem-text">Intro to Advanced Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/imodel/" class="elem-text">IModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/imodelstate+part/" class="elem-text">IModelState and IModelPart</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/ibakedmodel/" class="elem-text">IBakedModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/extended-blockstates/" class="elem-text">Extended Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/perspective/" class="elem-text">Perspective</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/itemoverridelist/" class="elem-text">ItemOverrideList</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/icustommodelloader/" class="elem-text">ICustomModelLoader</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Rendering</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../rendering/teisr/" class="elem-text">TileEntityItemStackRenderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Events</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../events/intro/" class="elem-text">Basic Usage</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Networking</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../networking/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../networking/overview/" class="elem-text">Overview</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../networking/simpleimpl/" class="elem-text">SimpleImpl</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Data Storage</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../datastorage/capabilities/" class="elem-text">Capabilities</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../datastorage/worldsaveddata/" class="elem-text">World Saved Data</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../datastorage/extendedentityproperties/" class="elem-text">Extended Entity Properties</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../config/annotations/" class="elem-text">Config Annotations</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Utilities</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../utilities/recipes/" class="elem-text">Recipes</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../utilities/oredictionary/" class="elem-text">OreDictionary</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../utilities/permissionapi/" class="elem-text">PermissionAPI</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Effects</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../effects/sounds/" class="elem-text">Sounds</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Conventions</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../conventions/versioning/" class="elem-text">Versioning</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../conventions/locations/" class="elem-text">Locations</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../conventions/loadstages/" class="elem-text">Loading Stages</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Contributing to Forge</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../forgedev/" class="elem-text">Getting Started</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../forgedev/prguidelines/" class="elem-text">PR Guidelines</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="tileentities">TileEntities<a class="headerlink" href="#tileentities" title="Permanent link"> </a></h1>
+<p>Tile Entities are like simplified Entities, that are bound to a Block.
+They are used to store dynamic data, execute tick based tasks and for dynamic rendering.
+Some examples from vanilla Minecraft would be: handling of inventories (chests), smelting logic on furnaces, or area effects for beacons.
+More advanced examples exist in mods, such as quarries, sorting machines, pipes, and displays.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>TileEntities</code> aren&rsquo;t a solution for everything and they can cause lag when used wrongly.
+When possible, try to avoid them.</p>
+</div>
+<h2 id="creating-a-tileentity">Creating a <code>TileEntity</code><a class="headerlink" href="#creating-a-tileentity" title="Permanent link"> </a></h2>
+<p>In order to create a <code>TileEntity</code> you need to extend the <code>TileEntity</code> class.
+It is important that your <code>TileEntity</code> has a default constructor, so that Minecraft can properly load it.
+After you&rsquo;ve created your class, you need to register the <code>TileEntity</code>. For this you need to call</p>
+<pre class="highlight"><code class="language-JAVA">GameRegistry#registerTileEntity(Class&lt;? extends TileEntity&gt; tileEntityClass, ResourceLocation key)</code></pre>
+
+<p>Where the first parameter is simply your TileEntity class and the second the registry name of your TileEntity.
+At this point you can either choose to do it during the <code>FMLPreInitializationEvent</code> or during the <code>RegistryEvent.Register&lt;Block&gt;</code> event,
+as <code>TileEntities</code> don&rsquo;t have their own Registry Event yet.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The method to register a <code>TileEntity</code> is using a <code>String</code> instead of a <code>ResourceLocation</code> before Forge version <code>14.23.3.2694</code>
+This method creates a <code>ResourceLocation</code> from the String. Be sure to use the ResourceLocation format modid:tile_entity to avoid it being called minecraft:tile_entity.</p>
+</div>
+<h2 id="attaching-a-tileentity-to-a-block">Attaching a <code>TileEntity</code> to a <code>Block</code><a class="headerlink" href="#attaching-a-tileentity-to-a-block" title="Permanent link"> </a></h2>
+<p>To attach your new <code>TileEntity</code> to a <code>Block</code> you need to override 2 (two) methods within the Block class.
+<pre class="highlight"><code class="language-JAVA">Block#hasTileEntity(IBlockstate state)
+
+Block#createTileEntity(World world, IBlockState state)</code></pre>
+Using the parameters you can choose if the block should have a <code>TileEntity</code> or not.
+Usually you will return <code>true</code> in the first method and a new instance of your <code>TileEntity</code> in the second method.</p>
+<h2 id="storing-data-within-your-tileentity">Storing Data within your <code>TileEntity</code><a class="headerlink" href="#storing-data-within-your-tileentity" title="Permanent link"> </a></h2>
+<p>In order to save data, override the following two methods
+<pre class="highlight"><code class="language-JAVA">TileEntity#writeToNBT(NBTTagCompound nbt)
+
+TileEntity#readFromNBT(NBTTagCompound nbt)</code></pre>
+These methods are called whenever the <code>Chunk</code> containing the <code>TileEntity</code> gets loaded from/saved to NBT.
+Use them to read and write to the fields in your tile entity class.</p>
+<div class="admonition note">
+<p class="admonition-title">Note<p>Whenever your data changes you need to call <code>TileEntity#markDirty()</code>, otherwise the <code>Chunk</code> containing your <code>TileEntity</code> might be skipped while the world is saved.</p>
+</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important<p>It is important that you call the super methods!</p>
+</p>
+<p>The tag names <code>id</code>, <code>x</code>, <code>y</code>, <code>z</code>, <code>ForgeData</code> and <code>ForgeCaps</code> are reserved by the super methods.</p>
+</div>
+<h2 id="keeping-a-tileentity-through-changing-blockstates">Keeping a <code>TileEntity</code> through changing <code>BlockStates</code><a class="headerlink" href="#keeping-a-tileentity-through-changing-blockstates" title="Permanent link"> </a></h2>
+<p>There might be situations in which you need to change your <code>BlockState</code>, such as with the vanilla furnace,
+which changes its state from <code>lit=false</code> to <code>lit=true</code> when fuel and something smeltable is inside.
+Achieving this is rather simple, by overriding following method
+<pre class="highlight"><code class="language-JAVA">TileEntity#shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newSate)</code></pre></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You should actually check the <code>BlockStates</code> and not just return <code>false</code> in order to prevent unwanted behavior and bugs. Especially as this method is also called when your <code>Block(State)</code> is replaced by another one, <code>Air</code> for example.</p>
+</div>
+<h2 id="ticking-tileentities">Ticking <code>TileEntities</code><a class="headerlink" href="#ticking-tileentities" title="Permanent link"> </a></h2>
+<p>If you need a ticking <code>TileEntity</code>, for example to keep track of the progress during a smelting process, you need to add the <code>net.minecraft.util.ITickable</code> interface to your <code>TileEntity</code>.
+Now you can implement all your calculations within
+<pre class="highlight"><code class="language-JAVA">ITickable#update()</code></pre></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method is called each tick, therefore you should avoid having complicated calculations in here.
+If possible, you should make more complex calculations just every X ticks.
+(The amount of ticks in a second may be lower then 20 (twenty) but won&rsquo;t be higher)</p>
+</div>
+<h2 id="synchronizing-the-data-to-the-client">Synchronizing the Data to the Client<a class="headerlink" href="#synchronizing-the-data-to-the-client" title="Permanent link"> </a></h2>
+<p>There are 3 (three) ways of syncing data to the client.
+Synchronizing on chunk load, synchronizing on block updates and synchronizing with a custom network message.</p>
+<h3 id="synchronizing-on-chunk-load">Synchronizing on chunk load<a class="headerlink" href="#synchronizing-on-chunk-load" title="Permanent link"> </a></h3>
+<p>For this you need to override
+<pre class="highlight"><code class="language-JAVA">TileEntity#getUpdateTag()
+
+TileEntity#handleUpdateTag(NBTTagCompound nbt)</code></pre>
+Again, this is pretty simple, the first method collects the data that should be send to the client,
+while the second one processes that data. If your <code>TileEntity</code> doesn&rsquo;t contain much data you might be able to use the methods out of the <code>Storing Data within your TileEntity</code> section.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Synchronizing excessive/useless data for TileEntities can lead to network congestion. You should optimize your network usage by sending only the information the client needs when the client needs it. For instance, it is more often that not unnecessary to send the inventory of a tile entity in the update tag, as this can be synchronized via its GUI.</p>
+</div>
+<h3 id="synchronizing-on-block-update">Synchronizing on block update<a class="headerlink" href="#synchronizing-on-block-update" title="Permanent link"> </a></h3>
+<p>This method is a bit more complicated, but again you just need to override 2 methods.
+Here is a tiny example implementation of it
+<pre class="highlight"><code class="language-JAVA">@Override
+public SPacketUpdateTileEntity getUpdatePacket(){
+    NBTTagCompound nbtTag = new NBTTagCompound();
+    //Write your data into the nbtTag
+    return new SPacketUpdateTileEntity(getPos(), 1, nbtTag);
+}
+
+@Override
+public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity pkt){
+    NBTTagCompound tag = pkt.getNbtCompound();
+    //Handle your Data
+}</code></pre>
+The Constructor of <code>SPacketUpdateTileEntity</code> takes:</p>
+<ul>
+<li>The position of your <code>TileEntity</code>.</li>
+<li>An ID, though it isn&rsquo;t really used besides by Vanilla, therefore you can just put a 1 in there.</li>
+<li>An <code>NBTTagCompound</code> which should contain your data.</li>
+</ul>
+<p>Additionally to this you now need to cause a &ldquo;BlockUpdate&rdquo; on the Client.
+<pre class="highlight"><code class="language-JAVA">World#notifyBlockUpdate(BlockPos pos, IBlockState oldState, IBlockState newState, int flags)</code></pre>
+The <code>pos</code> should be your TileEntitiy&rsquo;s position. For <code>oldState</code> and <code>newState</code> you can pass the current BlockState at that position.
+The <code>flags</code>are a bitmask and should contain 2, which will sync the changes to the client.</p>
+<h3 id="synchronizing-using-a-custom-network-message">Synchronizing using a custom network message<a class="headerlink" href="#synchronizing-using-a-custom-network-message" title="Permanent link"> </a></h3>
+<p>This way of synchronizing is probably the most complicated one, but is usually also the most optimized one,
+as you can make sure that only the data you need to be synchronized is actually synchronized.
+You should first check out the <a href="../../networking/"><code>Networking</code></a> section and especially <a href="../../networking/simpleimpl/"><code>SimpleImpl</code></a> before attempting this.
+Once you&rsquo;ve created your custom network message, you can send it to all users that have the <code>TileEntity</code> loaded with:
+<pre class="highlight"><code class="language-JAVA">SimpleNetworkWrapper#sendToAllTracking(IMessage, NetworkRegistry.TargetPoint)</code></pre></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is important that you do safety checks, the TileEntity might already be destroyed/replaced when the message arrives at the player!
+You should also check if the chunk is loaded (<code>World#isBlockLoaded(BlockPos)</code>)</p>
+</div>
+            
+        </article>
+        
+        <div class="docs-entry-footer-buttons" role="navigation" aria-label="footer navigation">
+            
+            <a href="../../animation/implementing/" title="Using the API" class="btn"><span class="fa fa-arrow-left"></span> Previous</a>
+            
+            
+            <a href="../../tileentities/tesr/" title="Special Renderer" class="float-right btn">Next <span class="fa fa-arrow-right"></span></a>
+            
+        </div>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme. Hosted by <a href="https://readthedocs.org">Read the Docs</a>.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

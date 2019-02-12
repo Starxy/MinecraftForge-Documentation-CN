@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connecting Blocks and Items to Models - Forge 中文文档</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_manifest.json">
+    <link rel="mask-icon" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css">
+    <link rel="stylesheet" href="../../css/styles_dark.css?version=1" data-theme="dark">
+    <link rel="stylesheet" href="../../css/styles_light.css?version=1" data-theme="light">
+
+    
+    <script type="text/javascript" src="../../js/theme-switch.js"></script>
+    
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../js/theme.js"></script>
+
+    <script>var base_url = '../..';</script>
+    
+    <script src="../../search/main.js"></script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../.." class="logo-image"><img src="../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="http://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+        
+        <form class="search" action="../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <h2><a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> 导航</h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+<li >
+    
+    <a href="../../" class="elem-text">主页</a>
+    
+    
+</li>
+
+                    
+                    
+<li >
+    
+    <a href="../../styleguide/" class="elem-text">文档编写样式说明</a>
+    
+    
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 起步</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/" class="elem-text">概述</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/structuring/" class="elem-text">Mod 文件结构</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/autoupdate/" class="elem-text">Forge 更新检查器</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/dependencymanagement/" class="elem-text">依赖管理</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/debugprofiler/" class="elem-text">调试分析器</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 概念</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../concepts/sides/" class="elem-text">Sides</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/resources/" class="elem-text">Resources</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/registries/" class="elem-text">Registries</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/jarsigning/" class="elem-text">The Fingerprint Violation Event</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/internationalization/" class="elem-text">Internationalization and localization</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blocks</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../blocks/blocks/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../blocks/states/" class="elem-text">Intro to Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../blocks/interaction/" class="elem-text">Interaction</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Animation API</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../animation/intro/" class="elem-text">Intro to the Animation API</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/armature/" class="elem-text">Armatures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/asm/" class="elem-text">Animation State Machines</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/implementing/" class="elem-text">Using the API</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Tile Entities</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../tileentities/tileentity/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../tileentities/tesr/" class="elem-text">Special Renderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Items</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../items/items/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../items/loot_tables/" class="elem-text">Loot Tables</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Models</a>
+    
+    <ul class="nav-collapsible nav-collapsible-open">
+        
+        
+<li >
+    
+    <a href="../../models/introduction/" class="elem-text">Intro to Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/files/" class="elem-text">Model Files</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blockstates</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/blockstates/introduction/" class="elem-text">Intro to Blockstate JSONs</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/blockstates/forgeBlockstates/" class="elem-text">Forge Blockstate JSON</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+        
+<li  class="elem-active elem-toc" >
+    
+    <a href="../../#connecting-blocks-and-items-to-models" class="elem-text">Connecting Blocks and Items to Models</a>
+    
+    
+    <ul class="table-of-contents">
+        
+        
+        
+        <li class="toc-subitem"><a href="#block-models">Block Models</a></li>
+        
+        <li class="toc-subitem"><a href="#item-models">Item Models</a></li>
+        
+        
+    </ul>
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/color/" class="elem-text">Coloring Textures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/overrides/" class="elem-text">Item Property Overrides</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Advanced Models</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/advanced/introduction/" class="elem-text">Intro to Advanced Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/imodel/" class="elem-text">IModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/imodelstate+part/" class="elem-text">IModelState and IModelPart</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/ibakedmodel/" class="elem-text">IBakedModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/extended-blockstates/" class="elem-text">Extended Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/perspective/" class="elem-text">Perspective</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/itemoverridelist/" class="elem-text">ItemOverrideList</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/icustommodelloader/" class="elem-text">ICustomModelLoader</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Rendering</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../rendering/teisr/" class="elem-text">TileEntityItemStackRenderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Events</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../events/intro/" class="elem-text">Basic Usage</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Networking</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../networking/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../networking/overview/" class="elem-text">Overview</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../networking/simpleimpl/" class="elem-text">SimpleImpl</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Data Storage</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../datastorage/capabilities/" class="elem-text">Capabilities</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../datastorage/worldsaveddata/" class="elem-text">World Saved Data</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../datastorage/extendedentityproperties/" class="elem-text">Extended Entity Properties</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../config/annotations/" class="elem-text">Config Annotations</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Utilities</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../utilities/recipes/" class="elem-text">Recipes</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../utilities/oredictionary/" class="elem-text">OreDictionary</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../utilities/permissionapi/" class="elem-text">PermissionAPI</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Effects</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../effects/sounds/" class="elem-text">Sounds</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Conventions</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../conventions/versioning/" class="elem-text">Versioning</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../conventions/locations/" class="elem-text">Locations</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../conventions/loadstages/" class="elem-text">Loading Stages</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Contributing to Forge</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../forgedev/" class="elem-text">Getting Started</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../forgedev/prguidelines/" class="elem-text">PR Guidelines</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="connecting-blocks-and-items-to-models">Connecting Blocks and Items to Models<a class="headerlink" href="#connecting-blocks-and-items-to-models" title="Permanent link"> </a></h1>
+<h2 id="block-models">Block Models<a class="headerlink" href="#block-models" title="Permanent link"> </a></h2>
+<p>Blocks are not directly linked to models, instead, block<em>states</em> are mapped to <code>ModelResourceLocation</code>s, which point to models (&ldquo;models&rdquo; includes blockstate JSONs). An <code>IBlockState</code> is mapped to a <code>ModelResourceLocation</code> by an <code>IStateMapper</code>. The default statemapper, which works by default for all blocks, works as follows:</p>
+<ol>
+<li>Get the registry name of the blockstate&rsquo;s block.</li>
+<li>Set said name as the <code>ResourceLocation</code> part of the <code>ModelResourceLocation</code>.</li>
+<li>Get all properties and their values in the blockstate.</li>
+<li>Get the name of each property with <code>IProperty#getName</code>.</li>
+<li>Get the name of each value with <code>IProperty&lt;T&gt;#getName(T)</code>.</li>
+<li>Sort the pairs alphabetically by the name of the <em>property only</em>.</li>
+<li>Produce a comma delimited string of key-value pairs (e.g. <code>a=b,c=d,e=f</code>).</li>
+<li>Set that as the variant part of the <code>ModelResourceLocation</code>.</li>
+<li>If the variant string is empty (i.e. no properties defined), default the variant to <code>normal</code>.</li>
+</ol>
+<p>The variant string is silently <code>toLowerCase</code>d, so if a statemapper returns <code>mod:model#VARIANT</code>, the game will query the JSON for the string &ldquo;variant&rdquo;, not &ldquo;VARIANT.&rdquo;</p>
+<h3 id="custom-istatemappers">Custom <code>IStateMapper</code>s<a class="headerlink" href="#custom-istatemappers" title="Permanent link"> </a></h3>
+<p>It&rsquo;s simple to use a custom <code>IStateMapper</code>. Once an instance is acquired, it may be registered with a call to <code>ModelLoader.setCustomStateMapper</code>. <code>IStateMapper</code>s are registered per block, so this method receives both the <code>IStateMapper</code> and the block it works on. There is also a builder <code>StateMap.Builder</code> for some common use cases.</p>
+<h4 id="statemapbuilder"><code>StateMap.Builder</code><a class="headerlink" href="#statemapbuilder" title="Permanent link"> </a></h4>
+<p>The builder <code>StateMap.Builder</code> can create <code>IStateMapper</code>s for some of the most common use cases. Once one is instantiated, methods can be called to set its parameters, and a call to <code>build</code> will generate an <code>IStateMapper</code> using those parameters.</p>
+<h5 id="withname"><code>withName</code><a class="headerlink" href="#withname" title="Permanent link"> </a></h5>
+<p><code>withName</code> takes a property as argument and sets that as the &ldquo;name&rdquo; (actually the path) of the returned <code>ModelResourceLocation</code>. When the resulting <code>IStateMapper</code> is applied to a blockstate, it takes the value of the property given, then finds the name for that value, and uses that as the resource path. It is clearer with an example:</p>
+<pre class="highlight"><code class="language-java">PropertyDirection PROP_FACING = PropertyDirection.create("facing"); // Start with a property
+IStateMapper mapper = new StateMap.Builder().withName(PROP_FACING).build(); // Use the builder</code></pre>
+
+<p>Now, if <code>mapper</code> is asked to find the <code>ModelResourceLocation</code> for the blockstate <code>examplemod:block1[facing=east]</code>, it will map it to <code>examplemod:east#normal</code>. Given <code>examplemod:block2[color=red,facing=north]</code>, it will map it to <code>examplemod:north#color=red</code>.</p>
+<h5 id="withsuffix"><code>withSuffix</code><a class="headerlink" href="#withsuffix" title="Permanent link"> </a></h5>
+<p>The suffix is a plain string that gets tacked on to the end of the resource path. For example, if the suffix is set to <code>_suff</code>, the resulting <code>IStateMapper</code> will map the blockstate <code>examplemod:block[facing=east]</code> to the <code>ModelResourceLocation</code> <code>examplemod:block_suff#facing=east</code>.</p>
+<h5 id="ignore"><code>ignore</code><a class="headerlink" href="#ignore" title="Permanent link"> </a></h5>
+<p>This causes the <code>IStateMapper</code> to simply ignore the given properties when mapping a blockstate. When called twice, the two lists are merged. An example:</p>
+<pre class="highlight"><code class="language-java">PropertyDirection PROP_OUT = PropertyDirection.create("out");
+PropertyDirection PROP_IN = PropertyDirection.create("in");
+// These two are equivalent
+IStateMapper together = new StateMap.Builder().ignore(PROP_OUT, PROP_IN).build();
+IStateMapper merged = new StateMap.Builder().ignore(PROP_OUT).ignore(PROP_IN).build();</code></pre>
+
+<p>When either <code>together</code> or <code>merged</code> are asked to map the blockstate <code>examplemod:block1[in=north,out=south]</code>, they&rsquo;ll give the <code>ModelResourceLocation</code> <code>examplemod:block1#normal</code>. Given <code>examplemod:block2[in=north,out=south,color=blue]</code>, they&rsquo;ll produce <code>examplemod:block2#color=blue</code>. Finally, given <code>examplemod:block3[color=white,out=east]</code> (no <code>in</code>), they&rsquo;ll produce <code>examplemod:block3#color=white</code>.</p>
+<h2 id="item-models">Item Models<a class="headerlink" href="#item-models" title="Permanent link"> </a></h2>
+<p>Unlike blocks, which automatically have a default <code>IStateMapper</code> that works without any extra registration, items must be registered to their models manually. This is done through <code>ModelLoader.setCustomModelResourceLocation</code>. This method takes the item, a metadata value, and a <code>ModelResourceLocation</code>, and registers a mapping so that all <code>ItemStack</code>s with the item and metadata given use the given <code>ModelResourceLocation</code> for their model. The way the game searches for the model is as follows:</p>
+<ol>
+<li>For a <code>ModelResourceLocation</code> <code>&lt;namespace&gt;:&lt;path&gt;#&lt;varstr&gt;</code></li>
+<li>Attempt to find a custom model loader that volunteers to load this model.</li>
+<li>If that succeeds, load the model with the found loader and break out of these instructions.</li>
+<li>If that fails, attempt to load it from the blockstate JSON loader.</li>
+<li>If that fails, attempt to load it from the vanilla JSON loader (which loads the model <code>assets/&lt;namespace&gt;/models/item/&lt;path&gt;.json</code>).</li>
+</ol>
+<p>JSON item models from <code>models/item</code> can also leverage <a href="../overrides/">overrides</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>ModelLoader.setCustomModelResourceLocation</code> also calls <code>ModelLoader.registerItemVariants</code> with the item and <code>ModelResourceLocation</code> given. This sets up the model for baking later.</p>
+</div>
+<h3 id="itemmeshdefinition"><code>ItemMeshDefinition</code><a class="headerlink" href="#itemmeshdefinition" title="Permanent link"> </a></h3>
+<p>An <code>ItemMeshDefinition</code> is a function that takes <code>ItemStack</code>s and maps them to <code>ModelResourceLocation</code>s. They are registered per item, and this can be done with <code>ModelLoader.setCustomMeshDefinition</code>, which takes an item and the <code>ItemMeshDefinition</code> to use for its <code>ItemStack</code>s.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><code>ModelLoader.setCustomMeshDefinition</code> <strong>does not</strong> call <code>ModelLoader.registerItemVariants</code>. Therefore, <code>ModelLoader.registerItemVariants</code> method must be passed every <code>ModelResourceLocation</code> the <code>ItemMeshDefinition</code> can return in order for it to work.</p>
+</div>
+<h3 id="blockstate-jsons-for-items">Blockstate JSONs for Items<a class="headerlink" href="#blockstate-jsons-for-items" title="Permanent link"> </a></h3>
+<p>Note that <em>items</em> can use <em>block</em>state JSONs. This is possible by simply passing a <code>ModelResourceLocation</code> pointing to a blockstate JSON into <code>ModelLoader.setCustomModelResourceLocation</code> or returning it from an <code>ItemMeshDefinition</code>. Doing so allows the model to take advantage of things like submodels and combining variants. The two main use cases are items that share their models with blocks (especially <code>ItemBlock</code>s) and the default item layer model (The <code>textures</code> block inside combining variant definitions can be used to build up the layers of the model, with one property setting <code>layer0</code>, another setting <code>layer1</code>, etc.).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>1.9 multipart blockstates will not work as item models out of the box, as they require an <code>IBlockState</code> to select a model.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>There is one major caveat. Blockstate JSONs can only resolve paths to models under <code>models/block</code>; they cannot see models under <code>models/item</code> (even using <code>../item</code> causes an error). This means that the <code>minecraft:item/generated</code> model (which sets the default transforms for items) cannot be used in a blockstate JSON. As a workaround, the <code>minecraft:builtin/generated</code> model can be used instead and the transforms set with the <code>transform</code> tag in the blockstate JSON. (Block models that inherit from <code>minecraft:block/block</code> already set transforms, so this isn&rsquo;t necessary for them.) Here&rsquo;s an example:</p>
+<pre class="highlight"><code class="language-json">"defaults": {
+  "model": "builtin/generated",
+  "__comment": "Get Forge to inject the default rotations and scales for an item in a player's hand, on the ground, etc.",
+  "transform": "forge:default-item"
+}</code></pre>
+
+</div>
+            
+        </article>
+        
+        <div class="docs-entry-footer-buttons" role="navigation" aria-label="footer navigation">
+            
+            <a href="../../models/blockstates/forgeBlockstates/" title="Forge Blockstate JSON" class="btn"><span class="fa fa-arrow-left"></span> Previous</a>
+            
+            
+            <a href="../../models/color/" title="Coloring Textures" class="float-right btn">Next <span class="fa fa-arrow-right"></span></a>
+            
+        </div>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme. Hosted by <a href="https://readthedocs.org">Read the Docs</a>.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

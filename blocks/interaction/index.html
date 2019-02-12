@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interaction - Forge 中文文档</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_manifest.json">
+    <link rel="mask-icon" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css">
+    <link rel="stylesheet" href="../../css/styles_dark.css?version=1" data-theme="dark">
+    <link rel="stylesheet" href="../../css/styles_light.css?version=1" data-theme="light">
+
+    
+    <script type="text/javascript" src="../../js/theme-switch.js"></script>
+    
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../js/theme.js"></script>
+
+    <script>var base_url = '../..';</script>
+    
+    <script src="../../search/main.js"></script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../.." class="logo-image"><img src="../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="http://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+        
+        <form class="search" action="../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <h2><a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> 导航</h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+<li >
+    
+    <a href="../../" class="elem-text">主页</a>
+    
+    
+</li>
+
+                    
+                    
+<li >
+    
+    <a href="../../styleguide/" class="elem-text">文档编写样式说明</a>
+    
+    
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 起步</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/" class="elem-text">概述</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/structuring/" class="elem-text">Mod 文件结构</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/autoupdate/" class="elem-text">Forge 更新检查器</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/dependencymanagement/" class="elem-text">依赖管理</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/debugprofiler/" class="elem-text">调试分析器</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 概念</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../concepts/sides/" class="elem-text">Sides</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/resources/" class="elem-text">Resources</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/registries/" class="elem-text">Registries</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/jarsigning/" class="elem-text">The Fingerprint Violation Event</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/internationalization/" class="elem-text">Internationalization and localization</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blocks</a>
+    
+    <ul class="nav-collapsible nav-collapsible-open">
+        
+        
+<li >
+    
+    <a href="../../blocks/blocks/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../blocks/states/" class="elem-text">Intro to Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li  class="elem-active elem-toc" >
+    
+    <a href="../../#block-interaction" class="elem-text">Interaction</a>
+    
+    
+    <ul class="table-of-contents">
+        
+        
+        
+        <li class="toc-subitem"><a href="#player-right-click">Player Right Click</a></li>
+        
+        <li class="toc-subitem"><a href="#player-breakdestroy">Player Break/Destroy</a></li>
+        
+        <li class="toc-subitem"><a href="#player-highlighting">Player Highlighting</a></li>
+        
+        <li class="toc-subitem"><a href="#entity-collision">Entity Collision</a></li>
+        
+        <li class="toc-subitem"><a href="#onblockclicked">onBlockClicked</a></li>
+        
+        <li class="toc-subitem"><a href="#onblockdestroyedbyplayer">onBlockDestroyedByPlayer</a></li>
+        
+        
+    </ul>
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Animation API</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../animation/intro/" class="elem-text">Intro to the Animation API</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/armature/" class="elem-text">Armatures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/asm/" class="elem-text">Animation State Machines</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/implementing/" class="elem-text">Using the API</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Tile Entities</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../tileentities/tileentity/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../tileentities/tesr/" class="elem-text">Special Renderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Items</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../items/items/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../items/loot_tables/" class="elem-text">Loot Tables</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Models</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/introduction/" class="elem-text">Intro to Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/files/" class="elem-text">Model Files</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blockstates</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/blockstates/introduction/" class="elem-text">Intro to Blockstate JSONs</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/blockstates/forgeBlockstates/" class="elem-text">Forge Blockstate JSON</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/using/" class="elem-text">Connecting Blocks and Items to Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/color/" class="elem-text">Coloring Textures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/overrides/" class="elem-text">Item Property Overrides</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Advanced Models</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/advanced/introduction/" class="elem-text">Intro to Advanced Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/imodel/" class="elem-text">IModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/imodelstate+part/" class="elem-text">IModelState and IModelPart</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/ibakedmodel/" class="elem-text">IBakedModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/extended-blockstates/" class="elem-text">Extended Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/perspective/" class="elem-text">Perspective</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/itemoverridelist/" class="elem-text">ItemOverrideList</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/icustommodelloader/" class="elem-text">ICustomModelLoader</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Rendering</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../rendering/teisr/" class="elem-text">TileEntityItemStackRenderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Events</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../events/intro/" class="elem-text">Basic Usage</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Networking</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../networking/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../networking/overview/" class="elem-text">Overview</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../networking/simpleimpl/" class="elem-text">SimpleImpl</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Data Storage</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../datastorage/capabilities/" class="elem-text">Capabilities</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../datastorage/worldsaveddata/" class="elem-text">World Saved Data</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../datastorage/extendedentityproperties/" class="elem-text">Extended Entity Properties</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../config/annotations/" class="elem-text">Config Annotations</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Utilities</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../utilities/recipes/" class="elem-text">Recipes</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../utilities/oredictionary/" class="elem-text">OreDictionary</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../utilities/permissionapi/" class="elem-text">PermissionAPI</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Effects</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../effects/sounds/" class="elem-text">Sounds</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Conventions</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../conventions/versioning/" class="elem-text">Versioning</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../conventions/locations/" class="elem-text">Locations</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../conventions/loadstages/" class="elem-text">Loading Stages</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Contributing to Forge</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../forgedev/" class="elem-text">Getting Started</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../forgedev/prguidelines/" class="elem-text">PR Guidelines</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="block-interaction">Block Interaction<a class="headerlink" href="#block-interaction" title="Permanent link"> </a></h1>
+<p>There are many different ways players (and other things) can interact with blocks, such as right clicking, left clicking, colliding, walking on, and of course mining.</p>
+<p>This page will cover the basics of the most common types of interaction with blocks.</p>
+<h2 id="player-right-click">Player Right Click<a class="headerlink" href="#player-right-click" title="Permanent link"> </a></h2>
+<p>Since left clicking, or &ldquo;punching&rdquo;, a block does not generally result in any unique behavior, it is probably fair to say right clicking, or &ldquo;activation&rdquo;, is <em>the</em> most common method of interaction. And thankfully, it is also one of the simplest to handle.</p>
+<h3 id="onblockactivated"><code>onBlockActivated</code><a class="headerlink" href="#onblockactivated" title="Permanent link"> </a></h3>
+<p>This is the method that controls right click behavior, and it is a rather complicated one. Here is its full signature:</p>
+<pre class="highlight"><code class="language-java">public boolean onBlockActivated(World worldIn,
+                                BlockPos pos,
+                                IBlockState state,
+                                EntityPlayer playerIn,
+                                EnumHand hand,
+                                @Nullable ItemStack heldItem,
+                                EnumFacing side,
+                                float hitX,
+                                float hitY,
+                                float hitZ)</code></pre>
+
+<p>There&rsquo;s quite a bit to discuss here.</p>
+<h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link"> </a></h4>
+<p>The first few parameters are obvious, they are the current world, position, and state of the block. Next is the player that is activating the block, and the hand with which they are activating.</p>
+<p>The next parameter, <code>heldItem</code>, is the <code>ItemStack</code> which the player activated the block with. Note that this parameter is <code>@Nullable</code> meaning it can be passed as null (i.e. no item was in the hand).</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The ItemStack passed to this method is the one you should use for checking what was in the player&rsquo;s hand. Grabbing the currently held stack from the player is unreliable as it may have changed since activation.</p>
+</div>
+<p>The last four parameters are all related. <code>side</code> is obviously the side which was activated, however <code>hitX</code>, <code>hitY</code>, and <code>hitZ</code> are a bit less obvious. These are the coordinates of the activation on the block&rsquo;s bounds. They are on the range 0 to 1, and represent where exactly &ldquo;on&rdquo; the block the player clicked.</p>
+<h4 id="return-value">Return Value<a class="headerlink" href="#return-value" title="Permanent link"> </a></h4>
+<p>What is this magic boolean which must be returned? Simply put this, is whether or not the method &ldquo;did&rdquo; something. Return true if some action was performed, this will prevent further things from happening, such as item activation.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Returning <code>false</code> from this method on the client will prevent it being called on the server. It is common practice to just check <code>worldIn.isRemote</code> and return <code>true</code>, and otherwise go on to normal activation logic. Vanilla has many examples of this, such as the chest.</p>
+</div>
+<h3 id="uses">Uses<a class="headerlink" href="#uses" title="Permanent link"> </a></h3>
+<p>The uses for activation are literally endless. However, there are some common ones which deserve their own section.</p>
+<h4 id="guis">GUIs<a class="headerlink" href="#guis" title="Permanent link"> </a></h4>
+<p>One of the most common things to do on block activation is opening a GUI. Many blocks in vanilla behave this way, such as chests, hoppers, furnaces, and many more. More about GUIs can be found on <a href="GUIs">their page</a>.</p>
+<h4 id="activation">Activation<a class="headerlink" href="#activation" title="Permanent link"> </a></h4>
+<p>Another common use for activation is, well, activation. This can be something like &ldquo;turning on&rdquo; a block, or triggering it to perform some action. For instance, a block could light up when activated. A vanilla example would be buttons or levers.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><code>onBlockActivated</code> is called on both the client and the server, so be sure to keep the <a href="../../concepts/sides/">sidedness</a> of your code in mind. Many things, like opening GUIs and modifying the world, should only be done on the server-side.</p>
+</div>
+<h2 id="player-breakdestroy">Player Break/Destroy<a class="headerlink" href="#player-breakdestroy" title="Permanent link"> </a></h2>
+<p><em>Coming Soon</em></p>
+<h2 id="player-highlighting">Player Highlighting<a class="headerlink" href="#player-highlighting" title="Permanent link"> </a></h2>
+<p><em>Coming Soon</em></p>
+<h2 id="entity-collision">Entity Collision<a class="headerlink" href="#entity-collision" title="Permanent link"> </a></h2>
+<p><em>Coming Soon</em></p>
+<h2 id="onblockclicked"><code>onBlockClicked</code><a class="headerlink" href="#onblockclicked" title="Permanent link"> </a></h2>
+<pre class="highlight"><code class="language-java">public void onBlockClicked(World worldIn, BlockPos pos, EntityPlayer playerIn)</code></pre>
+
+<p>Called on a block when it is clicked by a player.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method is for when the player <em>left-clicks</em> on a block.
+Don&rsquo;t get this confused with <code>onBlockActivated</code>, which is called when the player <em>right-clicks</em>.</p>
+</div>
+<h3 id="parameters_1">Parameters:<a class="headerlink" href="#parameters_1" title="Permanent link"> </a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>World</code></td>
+<td align="center"><code>worldIn</code></td>
+<td align="left">The world that the block was clicked in</td>
+</tr>
+<tr>
+<td align="center"><code>BlockPos</code></td>
+<td align="center"><code>pos</code></td>
+<td align="left">The position of the block that was clicked</td>
+</tr>
+<tr>
+<td align="center"><code>EntityPlayer</code></td>
+<td align="center"><code>playerIn</code></td>
+<td align="left">The player who did the clicking</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage-example">Usage example<a class="headerlink" href="#usage-example" title="Permanent link"> </a></h3>
+<p>This method is perfect for adding custom events when a player clicks on a block.</p>
+<p>By default this method does nothing.<br />
+Two blocks that override this method are the <strong>Note Block</strong> and the <strong>RedstoneOre Block</strong>.</p>
+<p>The Note block overrides this method so that when left-clicked, it plays a sound.<br />
+The RedstoneOre block overrides method so that when left-clicked, it gives off emits faint light for a few seconds.</p>
+<h2 id="onblockdestroyedbyplayer"><code>onBlockDestroyedByPlayer</code><a class="headerlink" href="#onblockdestroyedbyplayer" title="Permanent link"> </a></h2>
+<pre class="highlight"><code class="language-java">public void onBlockDestroyedByPlayer(World worldIn, BlockPos pos, IBlockState state)</code></pre>
+
+<p>Called on a block after it&rsquo;s destroyed by a player</p>
+<h3 id="parameters_2">Parameters:<a class="headerlink" href="#parameters_2" title="Permanent link"> </a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>World</code></td>
+<td align="center"><code>worldIn</code></td>
+<td align="left">The world that the block was destroyed</td>
+</tr>
+<tr>
+<td align="center"><code>BlockPos</code></td>
+<td align="center"><code>pos</code></td>
+<td align="left">The position of the block that was destroyed</td>
+</tr>
+<tr>
+<td align="center"><code>IBlockState</code></td>
+<td align="center"><code>state</code></td>
+<td align="left">The state of the block that was destroyed</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code>pos</code> parameter may not hold the state indicated</p>
+</div>
+<h3 id="usage-example_1">Usage example<a class="headerlink" href="#usage-example_1" title="Permanent link"> </a></h3>
+<p>This method is perfect for adding custom events as a result of a player destroying a block</p>
+<p>By default this method does nothing.  </p>
+<p>The <strong>TNT Block</strong> overrides this method to cause it&rsquo;s explosion when a player destroys it.<br />
+This method is used by extended pistons; since an extended piston is made up of two blocks (the extended head and the base), 
+the <strong>PistonMoving Block</strong> makes use of this method to destroy the base block when the PistonMoving block is destroyed. </p>
+            
+        </article>
+        
+        <div class="docs-entry-footer-buttons" role="navigation" aria-label="footer navigation">
+            
+            <a href="../../blocks/states/" title="Intro to Blockstates" class="btn"><span class="fa fa-arrow-left"></span> Previous</a>
+            
+            
+            <a href="../../animation/intro/" title="Intro to the Animation API" class="float-right btn">Next <span class="fa fa-arrow-right"></span></a>
+            
+        </div>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme. Hosted by <a href="https://readthedocs.org">Read the Docs</a>.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

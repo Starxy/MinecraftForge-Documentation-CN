@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>概述 - Forge 中文文档</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_manifest.json">
+    <link rel="mask-icon" href="../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css">
+    <link rel="stylesheet" href="../css/styles_dark.css?version=1" data-theme="dark">
+    <link rel="stylesheet" href="../css/styles_light.css?version=1" data-theme="light">
+
+    
+    <script type="text/javascript" src="../js/theme-switch.js"></script>
+    
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../js/theme.js"></script>
+
+    <script>var base_url = '..';</script>
+    
+    <script src="../search/main.js"></script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href=".." class="logo-image"><img src="../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="http://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+        
+        <form class="search" action="../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <h2><a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> 导航</h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+<li >
+    
+    <a href="../" class="elem-text">主页</a>
+    
+    
+</li>
+
+                    
+                    
+<li >
+    
+    <a href="../styleguide/" class="elem-text">文档编写样式说明</a>
+    
+    
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 起步</a>
+    
+    <ul class="nav-collapsible nav-collapsible-open">
+        
+        
+<li  class="elem-active elem-toc" >
+    
+    <a href="../#forge" class="elem-text">概述</a>
+    
+    
+    <ul class="table-of-contents">
+        
+        
+        
+        <li class="toc-subitem"><a href="#mod">从零开始进行 Mod 开发</a></li>
+        
+        <li class="toc-subitem"><a href="#intellij-idea">非控制台下的 IntelliJ IDEA 配置</a></li>
+        
+        <li class="toc-subitem"><a href="#mod_1">自定义 Mod 基本信息</a></li>
+        
+        <li class="toc-subitem"><a href="#mod_2">构建并测试你的 Mod</a></li>
+        
+        
+    </ul>
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../gettingstarted/structuring/" class="elem-text">Mod 文件结构</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../gettingstarted/autoupdate/" class="elem-text">Forge 更新检查器</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../gettingstarted/dependencymanagement/" class="elem-text">依赖管理</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../gettingstarted/debugprofiler/" class="elem-text">调试分析器</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 概念</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../concepts/sides/" class="elem-text">Sides</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../concepts/resources/" class="elem-text">Resources</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../concepts/registries/" class="elem-text">Registries</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../concepts/jarsigning/" class="elem-text">The Fingerprint Violation Event</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../concepts/internationalization/" class="elem-text">Internationalization and localization</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blocks</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../blocks/blocks/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../blocks/states/" class="elem-text">Intro to Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../blocks/interaction/" class="elem-text">Interaction</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Animation API</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../animation/intro/" class="elem-text">Intro to the Animation API</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../animation/armature/" class="elem-text">Armatures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../animation/asm/" class="elem-text">Animation State Machines</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../animation/implementing/" class="elem-text">Using the API</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Tile Entities</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../tileentities/tileentity/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../tileentities/tesr/" class="elem-text">Special Renderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Items</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../items/items/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../items/loot_tables/" class="elem-text">Loot Tables</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Models</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../models/introduction/" class="elem-text">Intro to Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../models/files/" class="elem-text">Model Files</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blockstates</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../models/blockstates/introduction/" class="elem-text">Intro to Blockstate JSONs</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../models/blockstates/forgeBlockstates/" class="elem-text">Forge Blockstate JSON</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+        
+<li >
+    
+    <a href="../models/using/" class="elem-text">Connecting Blocks and Items to Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../models/color/" class="elem-text">Coloring Textures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../models/overrides/" class="elem-text">Item Property Overrides</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Advanced Models</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../models/advanced/introduction/" class="elem-text">Intro to Advanced Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../models/advanced/imodel/" class="elem-text">IModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../models/advanced/imodelstate+part/" class="elem-text">IModelState and IModelPart</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../models/advanced/ibakedmodel/" class="elem-text">IBakedModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../models/advanced/extended-blockstates/" class="elem-text">Extended Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../models/advanced/perspective/" class="elem-text">Perspective</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../models/advanced/itemoverridelist/" class="elem-text">ItemOverrideList</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../models/advanced/icustommodelloader/" class="elem-text">ICustomModelLoader</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Rendering</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../rendering/teisr/" class="elem-text">TileEntityItemStackRenderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Events</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../events/intro/" class="elem-text">Basic Usage</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Networking</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../networking/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../networking/overview/" class="elem-text">Overview</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../networking/simpleimpl/" class="elem-text">SimpleImpl</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Data Storage</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../datastorage/capabilities/" class="elem-text">Capabilities</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../datastorage/worldsaveddata/" class="elem-text">World Saved Data</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../datastorage/extendedentityproperties/" class="elem-text">Extended Entity Properties</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../config/annotations/" class="elem-text">Config Annotations</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Utilities</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../utilities/recipes/" class="elem-text">Recipes</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../utilities/oredictionary/" class="elem-text">OreDictionary</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../utilities/permissionapi/" class="elem-text">PermissionAPI</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Effects</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../effects/sounds/" class="elem-text">Sounds</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Conventions</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../conventions/versioning/" class="elem-text">Versioning</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../conventions/locations/" class="elem-text">Locations</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../conventions/loadstages/" class="elem-text">Loading Stages</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Contributing to Forge</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../forgedev/" class="elem-text">Getting Started</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../forgedev/prguidelines/" class="elem-text">PR Guidelines</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="forge">Forge 入门<a class="headerlink" href="#forge" title="Permanent link"> </a></h1>
+<div class="admonition 译注">
+<p class="admonition-title">译注</p>
+<p>请先浏览下面的章节，遇到网络问题时请回来参考该部分。</p>
+<p>由于中国国内存在的不可抗力，以下提到的某些文件下载可能非常困难。并且由于 ForgeGradle 早期是将下载文件的地址硬编码写入的参考 <a href="https://github.com/MinecraftForge/ForgeGradle/issues/343">issue 343</a>，故不太可能提供镜像。（不过 <a href="https://github.com/MinecraftForge/ForgeGradle/commit/5b59efa4e735f70749ad2be779b780063abc10a2">5b59efa</a> 该提交似乎修复了某些问题，有能力的开发者可以看一下）。</p>
+<p>对于目前而言，下载时添加代理是唯一且最好的选择。</p>
+<pre class="highlight"><code>- 对于命令行进行的操作，在相应的 gradlew task 执行时后跟相应的参数。
+- 对于 IntelliJ 用户，在 `Setting -&gt; Build,Execution,Deployment -&gt; Gradle` 中配置 Gradle VM options 添加相关参数。
+- 译者非 Eclipse 用户，请自行摸索或在命令行中配置完成。
+- 或者如果你所用的代理服务支持全局代理的话开启即可。
+</code></pre>
+
+<p>使用到的参数， 将 [ip] 和 [port] 替代为你自己的代理服务所提供的选项：</p>
+<pre class="highlight"><code>- 对于 Socks 代理 `-DsocksProxyHost=[ip] -DsocksProxyPort=[port]`
+- 对于 Http 代理 `-Dhttp.proxyHost=[ip] -Dhttp.proxyPort=[port]`
+- 对于 Https 代理 `-Dhttps.proxyHost=[ip] -Dhttps.proxyPort=[port]`
+</code></pre>
+
+<p>对于 Gradle 本身下载缓慢的问题</p>
+<pre class="highlight"><code>终端提示从 `services.gradle.org/distributions` 下载时可以 Ctrl + C 将终端终止。
+找到 `C:\Users\用户名\.gradle\wrapper\dists` 可以看到一个 gradle-x.x-all 目录。
+手动去 `gradle.org/releases/` 下载对应版本。放入 gradle-x.x-all 目录中重新执行终端任务。
+</code></pre>
+
+</div>
+<h2 id="mod">从零开始进行 Mod 开发<a class="headerlink" href="#mod" title="Permanent link"> </a></h2>
+<p>该文档是一份指导你从零出发作出一些简单 mod 的指南。整个文档的剩余部分都是以此为目标编写的。</p>
+<ol>
+<li>首先在 <a href="http://files.minecraftforge.net/">Forge 官网</a> 下载源码。（对于高于 1.8 的版本，下载 Mdk 文件；对于早于 1.8/1.7 的版本下载 Src 文件）</li>
+<li>该压缩文件中包含有很多文件。但是只有以下文件是 mod 开发必须的，并且在所有的 mod 项目中都可重复使用；同时你可以在该压缩文件里找到 <code>src</code> 文件夹，里面包含了一个示例 mod，可以参考该 mod 进行之后的配置。<ul>
+<li><code>build.gradle</code></li>
+<li><code>gradlew.bat</code></li>
+<li><code>gradlew</code></li>
+<li><code>gradle</code> 文件夹</li>
+</ul>
+</li>
+<li>将上面列出的文件和目录移动到一个新的文件夹中，这就是你之后进行 mod 开发所在的目录。</li>
+<li>在上一步所创建的新文件夹中打开一个命令提示符，执行 <code>gradlew setupDecompWorkspace</code> 命令。这命令将会下载一系列用于反编译和构建 Minecraft 的必要文件。由于需要下载很多文件和反编译 Minecraft，这一步会花费稍长的时间。不过，只要你没有手动清空 Gradle 缓存文件夹，这些文件通常只需要下载并反编译一次，并且在日后的 mod 开发中重复使用。</li>
+<li>选择你的集成开发环境（IDE）：Forge 支持使用 Eclipse 或 IntelliJ 进行开发，但是其他开发环境不论是 Netbeans 或者 vi/emacs 都可以正常工作。<ul>
+<li>对于 Eclipse 用户，你应该运行 <code>gradlew eclipse</code> - 这会额外下载一些文件用于在当前目录中构建 eclipse 项目。</li>
+<li>对于 IntelliJ 用户，只需要导入 <code>build.gradle</code> 文件即可。</li>
+</ul>
+</li>
+<li>将项目加载到 IDE 中：<ul>
+<li>对于 Eclipse 用户，在任意目录创建一个 workspace （当然，最简单的位置是该项目文件夹的上一级），之后将你的项目文件夹作为 Project 导入 ，之后的事情都会自动完成。</li>
+<li>对于 IntelliJ 用户，你只需要创建运行配置（Run/Debug Configurations）。可以通过运行 <code>gradlew genIntellijRuns</code> 来完成。</li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>如果你在第四步运行 <code>:decompileMC</code> 看到以下错误</p>
+<pre class="highlight"><code>Execution failed for task ':decompileMc'.
+GC overhead limit exceeded</code></pre>
+
+<p>请为 gradle 分配更多内存：在 <code>~/.gradle/gradle.properties</code> 文件（该文件不存在时请手动创建）内添加 <code>org.gradle.jvmargs=-Xmx2G</code>。<code>~</code> 代表用户的 HOME 目录。对于 Windows 来说就是 <code>C:\Users\用户名\</code></p>
+</div>
+<h2 id="intellij-idea">非控制台下的 IntelliJ IDEA 配置<a class="headerlink" href="#intellij-idea" title="Permanent link"> </a></h2>
+<p>这部分开始时假设你已经根据上一部分的第一步到第三部创建了项目文件夹，因此这一部分从第四步开始</p>
+<ol start="4">
+<li>启动 IDEA 并且选择导入 <code>build.gradle</code> 文件，使用默认的 gradle wrapper 选项。等待该步骤完成后，你可以打开右侧的 Gradle 面板，里面会有一些 Gradle Tasks。</li>
+<li>双击运行 <code>forgegradle</code> 任务组中的<code>setupDecompWorkspace</code> 任务。等待该任务完成需要一定时间（译注：墙内用户甚至可能在下载阶段失败），并且使用不少的内存。如果该阶段失败，你可以在 IDEA 的 gradle settings 窗口的 <code>Gradle VM options</code> 选项中添加 <code>-Xmx3G</code> 或者更改全局的 gradle 配置文件来为 gradle 分配更多可用内存。</li>
+<li>下载、反编译完成后，你可以运行 <code>genIntellijRuns</code> 任务来对 run/debug 进行配置。</li>
+<li>所有这些任务完成后你可以点击位于右侧 <strong>Gradle 面板</strong> 的刷新按钮，这会重新同步 IDEA 项目和 Gradle 数据，来确保所有的依赖和设置都是最新的。</li>
+<li>如果你正在使用 IDEA 2016 或高与此的版本，你需要修复项目的 classpath（译注：经测试 2018 的版本不需要这一步），进入 <code>Edit configurations</code>，在 <code>Minecraft Client</code> 和 <code>Minecraft Server</code> 中，将  <code>Use classpath of module</code> 指向类似于 <code>&lt;project&gt;_main</code> 这样名字的模块。</li>
+</ol>
+<p>如果所有的操作都正确完成，你可以在下拉列表中选择 Minecraft 运行任务，选择 Run/Debug 按钮来测试你的配置。</p>
+<h2 id="mod_1">自定义 Mod 基本信息<a class="headerlink" href="#mod_1" title="Permanent link"> </a></h2>
+<p>你可以过 <code>build.gradle</code> 文件来对 mod 的文件名、版本号、等其他配置来自定义修改。</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>千万不要</strong> 编辑 build.gradle 文件中位于 <code>buildscript{}</code> 内的内容，该默认代码对 ForgeGradle 的正常运行至关重要。</p>
+</div>
+<p>几乎所有位于 <code>apply project: forge</code> 和 <code>// EDITS GO BELOW HERE</code> 标记下的内容都可以自定义修改或删除。</p>
+<p>这里有一个网站介绍了如何自定义 <code>build.gradle</code> 文件，<a href="https://forgegradle.readthedocs.org/en/latest/cookbook/">ForgeGradle cookbook</a>。一旦你熟悉了 mod 的配置，你可以在那里发现很多有用的东西。</p>
+<h3 id="buildgradle">简单的 <code>build.gradle</code> 自定义设置<a class="headerlink" href="#buildgradle" title="Permanent link"> </a></h3>
+<p>建议所有项目都对以下值进行设置</p>
+<ul>
+<li>更改构建文件的文件名 - 修改 <code>archivesBaseName</code> 的值</li>
+<li>更改 maven coordinates - 修改 <code>group</code> 的值</li>
+<li>更改版本号 - 修改 <code>version</code> 的值</li>
+</ul>
+<h2 id="mod_2">构建并测试你的 Mod<a class="headerlink" href="#mod_2" title="Permanent link"> </a></h2>
+<ol>
+<li>如果你想构建你的 mod，运行 <code>gradlew build</code> 任务。这会在 <code>build/libs</code> 目录中产生一个 <code>[archivesBaseName]-[version].jar</code> 命名的文件。这个文件可以放在一个装有 Forge 的 Minecraft 的 <code>mods</code>目录下；该文件可以用来分发。</li>
+<li>如果你想测试你的 mod，最简单的方式是使用配置项目时生成的运行设置。或者你可以运行 <code>gradlew runClient</code> 任务。这会在 <code>&lt;runDir&gt;</code> 的位置启动一个包含有你编写的 mod 在内的 Minecraft 客户端。可以在 <a href="https://forgegradle.readthedocs.org/en/latest/cookbook/">ForgeGradle cookbook</a> 中找到有关该命令的不同配置信息。</li>
+<li>你也可以使用位于 「run/debug configurations」 内的 「Minecraft server」 配置项或运行 <code>gradlew runServer</code> 任务来启动一个专用服务器。这会启动一个带有图形界面的 Minecraft 服务端（译注：新版的 Minecraft 服务端需要同意 ELUA 协议）。</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>如果你想编写服务端 mod，强烈建议你在专用服务器环境下来测试你的 mod。</p>
+</div>
+            
+        </article>
+        
+        <div class="docs-entry-footer-buttons" role="navigation" aria-label="footer navigation">
+            
+            <a href="../styleguide/" title="文档编写样式说明" class="btn"><span class="fa fa-arrow-left"></span> Previous</a>
+            
+            
+            <a href="../gettingstarted/structuring/" title="Mod 文件结构" class="float-right btn">Next <span class="fa fa-arrow-right"></span></a>
+            
+        </div>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme. Hosted by <a href="https://readthedocs.org">Read the Docs</a>.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

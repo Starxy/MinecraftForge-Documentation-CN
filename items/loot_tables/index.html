@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loot Tables - Forge 中文文档</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_manifest.json">
+    <link rel="mask-icon" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css">
+    <link rel="stylesheet" href="../../css/styles_dark.css?version=1" data-theme="dark">
+    <link rel="stylesheet" href="../../css/styles_light.css?version=1" data-theme="light">
+
+    
+    <script type="text/javascript" src="../../js/theme-switch.js"></script>
+    
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../js/theme.js"></script>
+
+    <script>var base_url = '../..';</script>
+    
+    <script src="../../search/main.js"></script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../.." class="logo-image"><img src="../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="http://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+        
+        <form class="search" action="../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <h2><a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> 导航</h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+<li >
+    
+    <a href="../../" class="elem-text">主页</a>
+    
+    
+</li>
+
+                    
+                    
+<li >
+    
+    <a href="../../styleguide/" class="elem-text">文档编写样式说明</a>
+    
+    
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 起步</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/" class="elem-text">概述</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/structuring/" class="elem-text">Mod 文件结构</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/autoupdate/" class="elem-text">Forge 更新检查器</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/dependencymanagement/" class="elem-text">依赖管理</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/debugprofiler/" class="elem-text">调试分析器</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 概念</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../concepts/sides/" class="elem-text">Sides</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/resources/" class="elem-text">Resources</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/registries/" class="elem-text">Registries</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/jarsigning/" class="elem-text">The Fingerprint Violation Event</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/internationalization/" class="elem-text">Internationalization and localization</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blocks</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../blocks/blocks/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../blocks/states/" class="elem-text">Intro to Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../blocks/interaction/" class="elem-text">Interaction</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Animation API</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../animation/intro/" class="elem-text">Intro to the Animation API</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/armature/" class="elem-text">Armatures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/asm/" class="elem-text">Animation State Machines</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/implementing/" class="elem-text">Using the API</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Tile Entities</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../tileentities/tileentity/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../tileentities/tesr/" class="elem-text">Special Renderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Items</a>
+    
+    <ul class="nav-collapsible nav-collapsible-open">
+        
+        
+<li >
+    
+    <a href="../../items/items/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li  class="elem-active elem-toc" >
+    
+    <a href="../../#loot-tables" class="elem-text">Loot Tables</a>
+    
+    
+    <ul class="table-of-contents">
+        
+        
+        
+        <li class="toc-subitem"><a href="#registering-a-modded-loot-table">Registering a Modded Loot Table</a></li>
+        
+        <li class="toc-subitem"><a href="#registering-custom-objects">Registering Custom Objects</a></li>
+        
+        <li class="toc-subitem"><a href="#modifying-vanilla-loot">Modifying Vanilla Loot</a></li>
+        
+        <li class="toc-subitem"><a href="#changing-mob-drops">Changing Mob Drops</a></li>
+        
+        <li class="toc-subitem"><a href="#generating-loot-in-code">Generating Loot In-Code</a></li>
+        
+        
+    </ul>
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Models</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/introduction/" class="elem-text">Intro to Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/files/" class="elem-text">Model Files</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blockstates</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/blockstates/introduction/" class="elem-text">Intro to Blockstate JSONs</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/blockstates/forgeBlockstates/" class="elem-text">Forge Blockstate JSON</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/using/" class="elem-text">Connecting Blocks and Items to Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/color/" class="elem-text">Coloring Textures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/overrides/" class="elem-text">Item Property Overrides</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Advanced Models</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/advanced/introduction/" class="elem-text">Intro to Advanced Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/imodel/" class="elem-text">IModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/imodelstate+part/" class="elem-text">IModelState and IModelPart</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/ibakedmodel/" class="elem-text">IBakedModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/extended-blockstates/" class="elem-text">Extended Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/perspective/" class="elem-text">Perspective</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/itemoverridelist/" class="elem-text">ItemOverrideList</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/icustommodelloader/" class="elem-text">ICustomModelLoader</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Rendering</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../rendering/teisr/" class="elem-text">TileEntityItemStackRenderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Events</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../events/intro/" class="elem-text">Basic Usage</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Networking</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../networking/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../networking/overview/" class="elem-text">Overview</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../networking/simpleimpl/" class="elem-text">SimpleImpl</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Data Storage</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../datastorage/capabilities/" class="elem-text">Capabilities</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../datastorage/worldsaveddata/" class="elem-text">World Saved Data</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../datastorage/extendedentityproperties/" class="elem-text">Extended Entity Properties</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../config/annotations/" class="elem-text">Config Annotations</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Utilities</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../utilities/recipes/" class="elem-text">Recipes</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../utilities/oredictionary/" class="elem-text">OreDictionary</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../utilities/permissionapi/" class="elem-text">PermissionAPI</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Effects</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../effects/sounds/" class="elem-text">Sounds</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Conventions</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../conventions/versioning/" class="elem-text">Versioning</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../conventions/locations/" class="elem-text">Locations</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../conventions/loadstages/" class="elem-text">Loading Stages</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Contributing to Forge</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../forgedev/" class="elem-text">Getting Started</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../forgedev/prguidelines/" class="elem-text">PR Guidelines</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="loot-tables">Loot Tables<a class="headerlink" href="#loot-tables" title="Permanent link"> </a></h1>
+<p>Loot tables are an easy way to generate random loot given random distributions of items. They are used in vanilla to generate random chest loot as well as for mob drops.</p>
+<p>The vanilla <a href="https://minecraft.gamepedia.com/Loot_table">wiki</a> describes the loot table JSON format in great detail, so this article instead will focus on code that you might have to write to use and manipulate loot tables in your mod. To get the most out of this article, read the aforementioned <a href="https://minecraft.gamepedia.com/Loot_table">wiki</a> page in its entirety before reading this article.</p>
+<h2 id="registering-a-modded-loot-table">Registering a Modded Loot Table<a class="headerlink" href="#registering-a-modded-loot-table" title="Permanent link"> </a></h2>
+<p>In order to make Minecraft load and be aware of your loot table, simply call <code>LootTableList.register(new ResourceLocation("modid", "loot_table_name"))</code>, which will resolve and load <code>/assets/modid/loot_tables/loot_table_name.json</code>. This call can be made during any of preinit, init, or postinit. You may organize your tables into folders freely.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Loot pools in mod loot tables must include an additional <code>name</code> tag that uniquely identifies that pool within the table. A common strategy is to name the pool with the kinds of items that its entries contain.
+If you specify multiple loot entries with the same <code>name</code> tag (e.g. the same item but with different functions each time), then you must give each of those entries an <code>entryName</code> tag that uniquely identifies that entry within the pool. For <code>name</code> tags that do not clash, then <code>entryName</code> is automatically set to the value of <code>name</code>.
+These additional requirements are imposed by Forge to facilitate modification of tables at load time using <code>LootTableLoadEvent</code> (see below).</p>
+</div>
+<h2 id="registering-custom-objects">Registering Custom Objects<a class="headerlink" href="#registering-custom-objects" title="Permanent link"> </a></h2>
+<p>In addition to vanilla&rsquo;s, you can also register your own loot conditions, loot functions, and entity properties.</p>
+<p>Entity properties are solely for use of the <code>minecraft:entity_properties</code> loot condition, and are used to test if entities involved in the looting (the looted entity or the killer) have certain properties. The only property in vanilla is <code>minecraft:on_fire</code>.</p>
+<p>All three are registered similarly, by calling <code>LootConditionManager.registerCondition</code>, <code>LootFunctionManager.registerFunction()</code>, or <code>EntityPropertyManager.registerProperty()</code>, respectively.</p>
+<p>The methods take a <code>Serializer</code> instance, which takes the ID of the object as a <code>ResourceLocation</code>, and the <code>Class</code> implementing the behavior in code - <code>LootCondition</code>, <code>LootFunction</code>, and <code>EntityProperty</code>, respectively.</p>
+<p>Since you register the JSON serializer and deserializer, you can require additional fields when using your condition, function, or property. See the vanilla implementations in <code>net.minecraft.world.storage.loot.{conditions, functions, properties}</code> for examples.</p>
+<p>Then, in order to use your conditions, functions, or properties, simply specify the registry name you passed to the <code>Serializer</code> constructor. An example loot entry:
+<pre class="highlight"><code class="language-javascript">{
+    "type": "item",
+    "name": "mymod:myitem",
+    "conditions": [
+        {
+            "condition": "mymod:mycondition",
+            "foo": 1, // can require custom parameters in deserializer
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "properties": {
+                "mymod:my_property": { // structure of the right side is completely up to deserializer
+                    "bar": 2
+                }
+            }
+        }
+    ],
+    "functions": [
+        {
+            "function": "mymod:myfunction",
+            "foobar": 3 // can require custom parameters in deserializer
+        }
+    ]
+}</code></pre></p>
+<h2 id="modifying-vanilla-loot">Modifying Vanilla Loot<a class="headerlink" href="#modifying-vanilla-loot" title="Permanent link"> </a></h2>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link"> </a></h3>
+<p>Not only can you specify your own loot tables, conditions, functions, and entity properties, you can also modify others as they load.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Users are allowed by vanilla to place their own loot tables in the world save directory to override the game&rsquo;s (and mods&rsquo;) own tables. These are considered config files and thus cannot be modified by the methods described below, <strong>by design</strong>.</p>
+</div>
+<p>The entry point to modifying tables at runtime is <code>LootTableLoadEvent</code>, which is fired once for each table loaded. From here, you may query and remove pools by name, or add instances of <code>LootPool</code>. This is why modded loot pools are required to have names.</p>
+<p>You might be wondering how we modify vanilla tables, then, since they do not have names. Forge resolves this by generating names for all pools in vanilla tables. The first pool is named <code>main</code>, since many tables only have one pool. Subsequent pools are named by position: <code>pool1</code> for the second pool, <code>pool2</code> for the third, and so on. Removing a pool does not shift the names of the other pools.</p>
+<p>Within each <code>LootPool</code>, you may also modify the roll and bonus roll attributes of the pool (how many times the table will call this pool) as well as query and remove entries by name, or add instances of <code>LootEntry</code>.</p>
+<p>Similar to the case for pools, entries need unique names for retrieval and removal. Forge resolves this by adding a hidden <code>entryName</code> field to all loot entries. If the entry&rsquo;s <code>name</code> field is unique within the pool, then <code>entryName</code> is automatically set to <code>name</code>. Otherwise, a name must be specified in modded entries, and is automatically generated for vanilla entries. For each repeat, a number is incremented. For example, if there are three entries in a vanilla pool each with <code>name: "minecraft:stick"</code>, then the three <code>entryName</code> tags generated would be <code>minecraft:stick</code>, <code>minecraft:stick#0</code>, and <code>minecraft:stick#1</code>. Likewise, removing an entry does not shift the names of the other entries.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must perform all of your desired changes to the table during that table&rsquo;s <code>LootTableLoadEvent</code>, any changes afterward are disallowed by safety checks or will cause undefined behavior if the safety checks are bypassed.</p>
+</div>
+<h3 id="adding-dungeon-loot">Adding Dungeon Loot<a class="headerlink" href="#adding-dungeon-loot" title="Permanent link"> </a></h3>
+<p>Next, an example of one of the most common use cases for modifying vanilla loot: adding dungeon item spawns.</p>
+<p>First, listen for the event for the table we want to modify:
+<pre class="highlight"><code class="language-Java">@SubscribeEvent
+public void lootLoad(LootTableLoadEvent evt) {
+    if (evt.getName().toString().equals("minecraft:chests/simple_dungeon")) {
+        // do stuff with evt.getTable()
+    }
+}</code></pre></p>
+<p>In this case, we are adding to the potential spawns, but don&rsquo;t want to interfere with the entry weights of the preexisting pools. The most flexible and simple solution is to add another pool with a single loot entry referencing your own loot table JSON, because loot entries are able to recursively draw from a completely different table.</p>
+<p>For example, your mod might include <code>/assets/mymod/loot_tables/inject/simple_dungeon.json</code>:
+<pre class="highlight"><code class="language-javascript">{
+    "pools": [
+        {
+            "name": "main",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:nether_star",
+                    "weight": 40
+                },
+                {
+                    "type": "empty",
+                    "weight": 60
+                }
+            ]
+        }
+    ]
+}</code></pre></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You still need to register this table with <code>LootTableList.register()</code>!</p>
+</div>
+<p>Then the loot entry and pool are created and added, resulting in a new loot pool for dungeon chests that has a 60% chance of nothing and 40% of a nether star.
+<pre class="highlight"><code class="language-Java">LootEntry entry = new LootEntryTable(new ResourceLocation("mymod:inject/simple_dungeon"), &lt;weight&gt;, &lt;quality&gt;, &lt;conditions&gt;, &lt;entryName&gt;); // weight doesn't matter since it's the only entry in the pool. Other params set as you wish.
+
+LootPool pool = new LootPool(new LootEntry[] {entry}, &lt;conditions&gt;, &lt;rolls&gt;, &lt;bonusRolls&gt;, &lt;name&gt;); // Other params set as you wish.
+
+evt.getTable().addPool(pool);</code></pre></p>
+<p>Of course, if the loot you want to add cannot be determined ahead of time, you can freely construct and add <code>LootPool</code>s and implementations of <code>LootEntry</code> in your event handler similar to the calls shown above.</p>
+<p>A real-world example of this approach in action can be seen in Botania. The event handler is located <a href="https://github.com/Vazkii/Botania/blob/e38556d265fcf43273c99ea1299a35400bf0c405/src/main/java/vazkii/botania/common/core/loot/LootHandler.java">here</a>, and the injected tables are located <a href="https://github.com/Vazkii/Botania/tree/e38556d265fcf43273c99ea1299a35400bf0c405/src/main/resources/assets/botania/loot_tables/inject">here</a>.</p>
+<h2 id="changing-mob-drops">Changing Mob Drops<a class="headerlink" href="#changing-mob-drops" title="Permanent link"> </a></h2>
+<p>Subclasses of <code>EntityLiving</code> automatically support drawing from a loot table upon death. This is done by overriding the <code>getLootTable</code> method to return a <code>ResourceLocation</code> to the desired table. This serves as the mob&rsquo;s default table; the tables of both your and other mods&rsquo; mobs can be overridden for a single entity by setting the <code>deathLootTable</code> field of the entity. </p>
+<h2 id="generating-loot-in-code">Generating Loot In-Code<a class="headerlink" href="#generating-loot-in-code" title="Permanent link"> </a></h2>
+<p>Occasionally, you may want to generate <code>ItemStack</code>s from a loot table from your own code.</p>
+<p>First, obtain the loot table itself (you need access to a <code>World</code>):
+<pre class="highlight"><code class="language-Java">LootTable table = this.world.getLootTableManager().getLootTableFromLocation(new ResourceLocation("mymod:my_table")); // resolves to /assets/mymod/loot_tables/my_table.json</code></pre></p>
+<p>Next, create a <code>LootContext</code> using the provided <code>LootContextBuilder</code>, which holds information about the context of the looting, such as the killer, luck of the looter, and finishing blow.
+<pre class="highlight"><code class="language-Java">LootContext ctx = new LootContext.Builder(world)
+    .withLuck(...) // adjust luck, commonly EntityPlayer.getLuck()
+    .withLootedEntity(...) // set looted entity
+    .withPlayer(...) // set player as killer
+    .withDamageSource(...) // pass killing blow and non-player killer
+    .build();</code></pre></p>
+<p>Finally, to get a collection of <code>ItemStack</code>s:
+<pre class="highlight"><code class="language-Java">List&lt;ItemStack&gt; stacks = table.generateLootForPools(world.rand, ctx);</code></pre></p>
+<p>Or to fill an inventory:
+<pre class="highlight"><code class="language-Java">table.fillInventory(iinventory, world.rand, ctx);</code></pre></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This only works with <code>IInventory</code> for now.</p>
+</div>
+            
+        </article>
+        
+        <div class="docs-entry-footer-buttons" role="navigation" aria-label="footer navigation">
+            
+            <a href="../../items/items/" title="Home" class="btn"><span class="fa fa-arrow-left"></span> Previous</a>
+            
+            
+            <a href="../../models/introduction/" title="Intro to Models" class="float-right btn">Next <span class="fa fa-arrow-right"></span></a>
+            
+        </div>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme. Hosted by <a href="https://readthedocs.org">Read the Docs</a>.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

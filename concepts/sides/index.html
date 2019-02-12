@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sides - Forge 中文文档</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_manifest.json">
+    <link rel="mask-icon" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css">
+    <link rel="stylesheet" href="../../css/styles_dark.css?version=1" data-theme="dark">
+    <link rel="stylesheet" href="../../css/styles_light.css?version=1" data-theme="light">
+
+    
+    <script type="text/javascript" src="../../js/theme-switch.js"></script>
+    
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../js/theme.js"></script>
+
+    <script>var base_url = '../..';</script>
+    
+    <script src="../../search/main.js"></script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../.." class="logo-image"><img src="../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="http://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+        
+        <form class="search" action="../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <h2><a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> 导航</h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+<li >
+    
+    <a href="../../" class="elem-text">主页</a>
+    
+    
+</li>
+
+                    
+                    
+<li >
+    
+    <a href="../../styleguide/" class="elem-text">文档编写样式说明</a>
+    
+    
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 起步</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/" class="elem-text">概述</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/structuring/" class="elem-text">Mod 文件结构</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/autoupdate/" class="elem-text">Forge 更新检查器</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/dependencymanagement/" class="elem-text">依赖管理</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/debugprofiler/" class="elem-text">调试分析器</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 概念</a>
+    
+    <ul class="nav-collapsible nav-collapsible-open">
+        
+        
+<li  class="elem-active elem-toc" >
+    
+    <a href="../../#minecraft-side" class="elem-text">Sides</a>
+    
+    
+    <ul class="table-of-contents">
+        
+        
+        
+        <li class="toc-subitem"><a href="#side">不同 Side 的区别</a></li>
+        
+        <li class="toc-subitem"><a href="#side-specific">执行特定端（Side-Specific）的操作</a></li>
+        
+        <li class="toc-subitem"><a href="#_1">常见错误</a></li>
+        
+        
+    </ul>
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/resources/" class="elem-text">Resources</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/registries/" class="elem-text">Registries</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/jarsigning/" class="elem-text">The Fingerprint Violation Event</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/internationalization/" class="elem-text">Internationalization and localization</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blocks</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../blocks/blocks/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../blocks/states/" class="elem-text">Intro to Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../blocks/interaction/" class="elem-text">Interaction</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Animation API</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../animation/intro/" class="elem-text">Intro to the Animation API</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/armature/" class="elem-text">Armatures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/asm/" class="elem-text">Animation State Machines</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/implementing/" class="elem-text">Using the API</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Tile Entities</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../tileentities/tileentity/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../tileentities/tesr/" class="elem-text">Special Renderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Items</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../items/items/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../items/loot_tables/" class="elem-text">Loot Tables</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Models</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/introduction/" class="elem-text">Intro to Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/files/" class="elem-text">Model Files</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blockstates</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/blockstates/introduction/" class="elem-text">Intro to Blockstate JSONs</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/blockstates/forgeBlockstates/" class="elem-text">Forge Blockstate JSON</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/using/" class="elem-text">Connecting Blocks and Items to Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/color/" class="elem-text">Coloring Textures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/overrides/" class="elem-text">Item Property Overrides</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Advanced Models</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/advanced/introduction/" class="elem-text">Intro to Advanced Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/imodel/" class="elem-text">IModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/imodelstate+part/" class="elem-text">IModelState and IModelPart</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/ibakedmodel/" class="elem-text">IBakedModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/extended-blockstates/" class="elem-text">Extended Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/perspective/" class="elem-text">Perspective</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/itemoverridelist/" class="elem-text">ItemOverrideList</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/icustommodelloader/" class="elem-text">ICustomModelLoader</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Rendering</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../rendering/teisr/" class="elem-text">TileEntityItemStackRenderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Events</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../events/intro/" class="elem-text">Basic Usage</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Networking</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../networking/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../networking/overview/" class="elem-text">Overview</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../networking/simpleimpl/" class="elem-text">SimpleImpl</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Data Storage</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../datastorage/capabilities/" class="elem-text">Capabilities</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../datastorage/worldsaveddata/" class="elem-text">World Saved Data</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../datastorage/extendedentityproperties/" class="elem-text">Extended Entity Properties</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../config/annotations/" class="elem-text">Config Annotations</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Utilities</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../utilities/recipes/" class="elem-text">Recipes</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../utilities/oredictionary/" class="elem-text">OreDictionary</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../utilities/permissionapi/" class="elem-text">PermissionAPI</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Effects</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../effects/sounds/" class="elem-text">Sounds</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Conventions</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../conventions/versioning/" class="elem-text">Versioning</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../conventions/locations/" class="elem-text">Locations</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../conventions/loadstages/" class="elem-text">Loading Stages</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Contributing to Forge</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../forgedev/" class="elem-text">Getting Started</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../forgedev/prguidelines/" class="elem-text">PR Guidelines</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="minecraft-side">Minecraft 中 Side 的概念<a class="headerlink" href="#minecraft-side" title="Permanent link"> </a></h1>
+<p>想要进行 mod 开发，理解 Side 的概念是非常重要的，Minecraft 中存在两种 side，一个为 <em>客户端（client）</em>，另一个位 <em>服务端（server）</em>。事实上关于 side 有很多误导性的概念和错误，对该概念理解错误可能会导致许多 bug，虽然不会导致游戏崩溃但是会产生一系列意想不到的影响。</p>
+<h2 id="side">不同 Side 的区别<a class="headerlink" href="#side" title="Permanent link"> </a></h2>
+<p>当我们谈及到 「client」 或者 「server」，通常我们都能明白我们在谈论游戏的哪一部分：客户端是用来与用户交互的内容，而服务端是让用户连接来进行多人游戏的地方。</p>
+<p>事实上，即便是有这两个概念如此清晰，还是有一些表述不清的地方。为了消除歧义，我们这里对客户端和服务端四种不同的情况进行详细讨论</p>
+<ul>
+<li>物理客户端（Physical client）：物理客户端是整个用于运行 Minecraft 游戏的应用程序。在游戏运行过程中，所有的线程、进程、服务都是物理客户端的一部分。</li>
+<li>物理服务端（Physical server）：我们常说的物理服务端通常指的是专用服务器（dedicated server）。物理服务端是用于运行 <code>minecraft_server.jar</code> 的应用程序，该程序没有可视化的 GUI。</li>
+<li>逻辑服务端（Logical server）：逻辑服务端通常指的是运行游戏逻辑的地方，包括怪物生成、天气、背包更新、生命值、AI 等之类的游戏机制。逻辑服务端存在于物理服务器中，但也可以和逻辑客户端一起一同运行在一个单人游戏的物理客户端上。逻辑服务器总会运行在一个名为 <code>Server Thread</code> 的线程上。</li>
+<li>逻辑客户端（Logical client）：逻辑客户端用来接收用户输入并将输入传达给逻辑服务端。除此之外，逻辑客户端还从逻辑服务端中接受数据并将这些数据转为换可以被玩家接受的画面和信息。逻辑客户端运行在 <code>Client Thread</code> 线程上，当然也存在一些其他专门用于处理音频和区块加载的线程。</li>
+</ul>
+<h2 id="side-specific">执行特定端（Side-Specific）的操作<a class="headerlink" href="#side-specific" title="Permanent link"> </a></h2>
+<h3 id="worldisremote"><code>world.isRemote</code><a class="headerlink" href="#worldisremote" title="Permanent link"> </a></h3>
+<!-- !!! 译注
+    刚接触该字段的时候可能会对 `isRemote` 有所疑惑，这里可以将逻辑服务端所在的地方理解为 `Local`，这样的话该布尔值的真假就易于理解了。毕竟 mod 的逻辑总是运行在逻辑服务端里的。如果世界运行在逻辑客户端，与 mod 所在的逻辑服务端相比该值就应该为 `true` 即 Remote 了。 -->
+
+<p>对该布尔类型的字段检查是你之后最常用的检查 side 的方法。查询 <code>World</code> 对象的该字段可以得知当前游戏正处在的<strong>逻辑端</strong>。比如，如果该字段值为 <code>true</code>，当前世界运行在一个逻辑客户端上；如果该字段为 <code>false</code> ，当前世界运行在一个逻辑服务端上。并且，在物理服务端上该字段的值总是为 <code>false</code> 但是你不能假定值为 <code>false</code> 的时候意味着当前世界运行在物理服务端上，因为在物理客户端上的逻辑服务端（即单人游戏）该值也可以为 <code>false</code>。</p>
+<p>当你需要确定是否需要运行某项游戏逻辑或机制时，请检查该值。例如，如果你想对任何破坏你的方块的玩家造成伤害，或者你想创造一个将泥土加工成钻石的机器，你需要保证 <code>world.isRemote</code> 的值为 <code>false</code> 的情况下再进行这些逻辑的处理。将游戏逻辑在逻辑客户端加载轻则造成游戏不同步（幽灵实体，不同步的状态等等），重则会导致游戏崩溃</p>
+<p>这个检查方法应当是你优先考虑的。除了 proxy 之外你很少再需要其他之外的方法来调整 siede 的行为状态。</p>
+<h3 id="sidedproxy"><code>@SidedProxy</code><a class="headerlink" href="#sidedproxy" title="Permanent link"> </a></h3>
+<p>考虑到我们在客户端和服务端都用一个通用的 jar 文件，并且物理客户端和物理服务端单独加载各自的 mod jar 文件，由此引出了一个重要的问题，怎样使用仅存在物理端方面的代码？所有在 <code>net.minecraft.client</code> 包里面的代码都只应用在物理客户端，所有在 <code>net.minecraft.server.dedicated</code> 包里的代码都只应用在物理服务端。当你写的任何类引用了一些类和方法，但是游戏运行家在该类时当前环境中不存在引用的类和方法时，会引起游戏崩溃。初学者常犯的错误是，在一个 block 或 title entity 类中调用 <code>Minecraft.getMinecraft().&lt;doStuff&gt;()</code> 该代码会让任何尝试加载该类的物理服务端崩溃。</p>
+<p>所以我们应该怎样解决这个问题？幸运的是，FML 提供了一个 <code>@sideProxy</code> 注解。该注解用来指定两个类的路径，一个是 <code>serverSide</code>，一个是 <code>clientSide</code>，并且用该注解来注释一个类内的字段。当 mod 启动时，fml 会根据当前所处的<strong>物理侧</strong>来实例化两个类中的其中一个。</p>
+<pre class="highlight"><code class="language-java">@SidedProxy(clientSide="com.xray.common.proxy.ClientProxy", serverSide="com.xray.common.proxy.ServerProxy")
+private static ClientProxy proxy;</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>理解 FML 是基于物理端来挑选相应的 proxy 类来实例化是非常重要的。一个单人游戏世界（逻辑服务端和逻辑客户端同在一个物理客户端中）会有一个位于 <code>clientSide</code> 的 proxy 类被实例化。</p>
+</div>
+<p>该方法常被用来注册渲染器（Renderers）和模型（Models），它们必须在主要的初始化方法 <code>preInit</code>、<code>init</code> 或 <code>postInit</code> 中调用。然而与图像渲染有关的方法在物理服务端上都不存在并且调用会引起崩溃。因此，我们应该将这些方法只放在客户端的 proxy 中，保证他们只在客户端中运行。</p>
+<p>请记住，两个指定的代理必须具有可被分配到使用 <code>@SidedProxy</code> 字段的类型。一个通用的模式但不绝对的的模式是为该字段的类型指定为一个 <code>IProxy</code> 接口，并且不同的物理端添加 <code>ClientProxy</code> 和 <code>ServerProxy</code> 实现类。</p>
+<h3 id="geteffectiveside"><code>getEffectiveSide</code><a class="headerlink" href="#geteffectiveside" title="Permanent link"> </a></h3>
+<p>当你没办法获得 <code>World</code> 对象的 <code>isRemote</code> 属性时，你可以调用 <code>FMLCommonHandler.getEffectiveSide()</code> 方法来获得代码运行所处的<strong>逻辑端</strong>。这个方法通过检查当前程序所处的线程的名字来<em>猜测</em>当前所处的 side。因此该方法只能够在其他方法不可用的时使用，谨记无论如何请将检查 <code>world.isRemote</code> 作为查询 side 的首要方法。</p>
+<h3 id="getside-sideonly"><code>getSide</code> 和 <code>@SideOnly</code><a class="headerlink" href="#getside-sideonly" title="Permanent link"> </a></h3>
+<p>你可以通过调用 <code>FMLCommonHandler.getSide()</code> 方法来获得代码运行所在的<strong>物理端</strong>。由于物理端在程序启动的时候就决定下来了，因此该方法的返回值是准确的，不需要猜测。但是该方法的使用情况很少。</p>
+<p>使用 <code>@SideOnly</code> 注解来注释一个方法或字段用来告知加载器 the respective member should be completely stripped out of the definition not on the specified <strong>physical</strong> side。通常来说，这些注解通常只在反编译后的 Minecraft 代码中出现，用来标示 Mojang 混淆器剥离出来的方法。这些注解不应该在编码中主动使用，除非你想去主动重写已经使用 <code>@SideOnly</code> 标记的原版方法，其他大部分情况下使用 <code>@SidedProxy</code> 或者检查 <code>getSide()</code> 方法来检查物理端。</p>
+<h2 id="_1">常见错误<a class="headerlink" href="#_1" title="Permanent link"> </a></h2>
+<h3 id="_2">跨逻辑端访问<a class="headerlink" href="#_2" title="Permanent link"> </a></h3>
+<p>无论何时你想从一个逻辑端发送信息到另一个逻辑端，你<strong>必须通过</strong>发送网络包（network packets）来完成。尽管单人模式下直接在逻辑服务器和逻辑客户端之间交换数据看起来非常方便，但这不是一个好的方法。</p>
+<p>这主要是由不经意间的静态字段访问造成的。由于逻辑客户端和逻辑服务端在单人模式中共用同一个 JVM，两个线程对静态变量进行读写操作可能会导致竞争，还会产生一些经典的线程问题。</p>
+<p>在 common 包内运行在逻辑服务端上的代码访问只能在物理客户端加载的类比如 <code>Minecraft</code> 也会导致此类错误。由于新手经常只在物理客户端上进行调试，所以经常会忽视导致物理客户端崩溃的一些错误。</p>
+            
+        </article>
+        
+        <div class="docs-entry-footer-buttons" role="navigation" aria-label="footer navigation">
+            
+            <a href="../../gettingstarted/debugprofiler/" title="调试分析器" class="btn"><span class="fa fa-arrow-left"></span> Previous</a>
+            
+            
+            <a href="../../concepts/resources/" title="Resources" class="float-right btn">Next <span class="fa fa-arrow-right"></span></a>
+            
+        </div>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme. Hosted by <a href="https://readthedocs.org">Read the Docs</a>.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mod 文件结构 - Forge 中文文档</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_manifest.json">
+    <link rel="mask-icon" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Forge Docs">
+    <meta name="application-name" content="Forge Docs">
+    <meta name="msapplication-config" content="../../mcforge_resources/247441864ab051a2bd22c960e8e7b8b5_browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/a1f20be65b.css">
+    <link rel="stylesheet" href="../../css/styles_dark.css?version=1" data-theme="dark">
+    <link rel="stylesheet" href="../../css/styles_light.css?version=1" data-theme="light">
+
+    
+    <script type="text/javascript" src="../../js/theme-switch.js"></script>
+    
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.23/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script type="text/javascript" src="../../js/theme.js"></script>
+
+    <script>var base_url = '../..';</script>
+    
+    <script src="../../search/main.js"></script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#" class="open-sidebar"><i class="fa fa-bars"></i></a>
+            <a href="../.." class="logo-image"><img src="../../images/logo.svg" width="244"></a>
+        </div>
+        <nav>
+            <ul class="links clearfix">
+                <li><a href="http://minecraftforge.net/">Forums</a></li>
+            </ul>
+        </nav>
+        
+        <form class="search" action="../../search.html" method="get">
+            <input type="submit" value="&#xf002;">
+            <div class="search-field">
+                <input type="search" title="Search" name="q" placeholder="Search...">
+            </div>
+        </form>
+        
+    </div>
+</header>
+<main class="wrapper sidebar-wrapper">
+    <div class="sidebar-left sidebar-sticky">
+        <aside>
+            <section class="sidebar-nav">
+                <h2><a href="#" class="close-sidebar"><i class="fa fa-bars"></i></a> 导航</h2>
+                <ul class="section-content scroll-pane">
+                    
+                    
+<li >
+    
+    <a href="../../" class="elem-text">主页</a>
+    
+    
+</li>
+
+                    
+                    
+<li >
+    
+    <a href="../../styleguide/" class="elem-text">文档编写样式说明</a>
+    
+    
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 起步</a>
+    
+    <ul class="nav-collapsible nav-collapsible-open">
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/" class="elem-text">概述</a>
+    
+    
+</li>
+
+        
+        
+<li  class="elem-active elem-toc" >
+    
+    <a href="../../#mod" class="elem-text">Mod 文件结构</a>
+    
+    
+    <ul class="table-of-contents">
+        
+        
+        
+        <li class="toc-subitem"><a href="#_1">包</a></li>
+        
+        <li class="toc-subitem"><a href="#mcmodinfo">mcmod.info 文件</a></li>
+        
+        <li class="toc-subitem"><a href="#mod_1">Mod 文件</a></li>
+        
+        <li class="toc-subitem"><a href="#mod_2">什么是 @Mod</a></li>
+        
+        <li class="toc-subitem"><a href="#_2">使用子包使代码保持整洁</a></li>
+        
+        <li class="toc-subitem"><a href="#_3">类命名方案</a></li>
+        
+        
+    </ul>
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/autoupdate/" class="elem-text">Forge 更新检查器</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/dependencymanagement/" class="elem-text">依赖管理</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../gettingstarted/debugprofiler/" class="elem-text">调试分析器</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> 概念</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../concepts/sides/" class="elem-text">Sides</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/resources/" class="elem-text">Resources</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/registries/" class="elem-text">Registries</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/jarsigning/" class="elem-text">The Fingerprint Violation Event</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../concepts/internationalization/" class="elem-text">Internationalization and localization</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blocks</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../blocks/blocks/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../blocks/states/" class="elem-text">Intro to Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../blocks/interaction/" class="elem-text">Interaction</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Animation API</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../animation/intro/" class="elem-text">Intro to the Animation API</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/armature/" class="elem-text">Armatures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/asm/" class="elem-text">Animation State Machines</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../animation/implementing/" class="elem-text">Using the API</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Tile Entities</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../tileentities/tileentity/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../tileentities/tesr/" class="elem-text">Special Renderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Items</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../items/items/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../items/loot_tables/" class="elem-text">Loot Tables</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Models</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/introduction/" class="elem-text">Intro to Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/files/" class="elem-text">Model Files</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Blockstates</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/blockstates/introduction/" class="elem-text">Intro to Blockstate JSONs</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/blockstates/forgeBlockstates/" class="elem-text">Forge Blockstate JSON</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/using/" class="elem-text">Connecting Blocks and Items to Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/color/" class="elem-text">Coloring Textures</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/overrides/" class="elem-text">Item Property Overrides</a>
+    
+    
+</li>
+
+        
+        
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Advanced Models</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../models/advanced/introduction/" class="elem-text">Intro to Advanced Models</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/imodel/" class="elem-text">IModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/imodelstate+part/" class="elem-text">IModelState and IModelPart</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/ibakedmodel/" class="elem-text">IBakedModel</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/extended-blockstates/" class="elem-text">Extended Blockstates</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/perspective/" class="elem-text">Perspective</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/itemoverridelist/" class="elem-text">ItemOverrideList</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../models/advanced/icustommodelloader/" class="elem-text">ICustomModelLoader</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Rendering</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../rendering/teisr/" class="elem-text">TileEntityItemStackRenderer</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Events</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../events/intro/" class="elem-text">Basic Usage</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Networking</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../networking/" class="elem-text">Home</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../networking/overview/" class="elem-text">Overview</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../networking/simpleimpl/" class="elem-text">SimpleImpl</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Data Storage</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../datastorage/capabilities/" class="elem-text">Capabilities</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../datastorage/worldsaveddata/" class="elem-text">World Saved Data</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../datastorage/extendedentityproperties/" class="elem-text">Extended Entity Properties</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../config/annotations/" class="elem-text">Config Annotations</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Utilities</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../utilities/recipes/" class="elem-text">Recipes</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../utilities/oredictionary/" class="elem-text">OreDictionary</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../utilities/permissionapi/" class="elem-text">PermissionAPI</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Effects</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../effects/sounds/" class="elem-text">Sounds</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Conventions</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../conventions/versioning/" class="elem-text">Versioning</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../conventions/locations/" class="elem-text">Locations</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../conventions/loadstages/" class="elem-text">Loading Stages</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                    
+<li class="elem-parent">
+    
+    <a href="../../#" class="elem-text toggle-collapsible"><span class="fa fa-plus collapsible-icon"></span> Contributing to Forge</a>
+    
+    <ul class="nav-collapsible ">
+        
+        
+<li >
+    
+    <a href="../../forgedev/" class="elem-text">Getting Started</a>
+    
+    
+</li>
+
+        
+        
+<li >
+    
+    <a href="../../forgedev/prguidelines/" class="elem-text">PR Guidelines</a>
+    
+    
+</li>
+
+        
+    </ul>
+</li>
+
+                    
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <div class="sidebar-sticky-wrapper-content">
+        <article class="docs-entry">
+            
+            <h1 id="mod">Mod 文件结构<a class="headerlink" href="#mod" title="Permanent link"> </a></h1>
+<p>我们会指导你组织你 mod 项目下不同的文件，并且告诉你这些文件的作用。</p>
+<div class="admonition 译注">
+<p class="admonition-title">译注</p>
+<p>该部分可以参考 Mdk 中附带的 examplemod，该 mod 的文件结构和相应的配置文件内容提供了很好的示例</p>
+</div>
+<h2 id="_1">包<a class="headerlink" href="#_1" title="Permanent link"> </a></h2>
+<p>选择一个唯一的包名。如果你拥有一个与项目相关的 URL，你可以将其作为顶级包名。例如，如果你有 <code>example.com</code> 这个域名，那么你可以将<code>com.example</code> 作为顶级包名。</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>如果没有相应域名的所属权，不要使用该域名作为顶级包名。但是你可以使用其他任何作为包名，比如你的名字或昵称，或者用 mod 的名字来对包命名。</p>
+</div>
+<p>你需要在顶级包名（如果有）之后为你的 mod 添加一个唯一的名字，比如 <code>examplemod</code>。在这种情况下，完成的包名是 <code>com.example.examplemod</code>。</p>
+<h2 id="mcmodinfo"><code>mcmod.info</code> 文件<a class="headerlink" href="#mcmodinfo" title="Permanent link"> </a></h2>
+<p>该文件定义了你编写的 mod 的元数据（Metadata）。这里面的信息会被玩家在游戏的 Mods 菜单里看到。一个 info 文件可以用来描述多个 mod。当一个 mod 类使用 <code>@Mod</code> 注解时，会定义 <code>useMetadata</code> 属性，该属性默认为 <code>false</code>。当 <code>useMetadata</code> 为 <code>true</code> 时，<code>mcmod.info</code> 文件内定义的键值会覆盖 <code>@Mod</code> 注解中定义的键值信息。</p>
+<p><code>mcmod.info</code> 为 JSON 格式的文件，根元素是一个对象数组，每一个对象描述 modid。该文件应当被存储在 <code>src/main/resources/mcmod.info</code> 目录中。一个用来描述单个 mod 的 <code>mcmod.info</code> 文件描述如下：</p>
+<pre class="highlight"><code>[{
+  "modid": "examplemod",
+  "name": "Example Mod",
+  "description": "Lets you craft dirt into diamonds. This is a traditional mod that has existed for eons. It is ancient. The holy Notch created it. Jeb rainbowfied it. Dinnerbone made it upside down. Etc.",
+  "version": "1.0.0.0",
+  "mcversion": "1.10.2",
+  "logoFile": "assets/examplemod/textures/logo.png",
+  "url": "minecraftforge.net/",
+  "updateJSON": "minecraftforge.net/versions.json",
+  "authorList": ["Author"],
+  "credits": "I'd like to thank my mother and father."
+}]
+</code></pre>
+
+<p>默认的 Gradle 会用项目的 version 来替换 <code>${version}</code>，用 Minecraft 的版本来替换 <code>${mcversion}</code>，但是该替换仅发生在 <code>mcmod.info</code> 文件中，所以你应该使用这些替代字符而不是直接将他们写出来。以下表格列出了所有可以使用的属性，其中 <code>required</code> 代表该属性没有设置默认值，并且缺失该属性配置会导致错误发生。除了所有的 <code>required</code> 属性，你也应该对 <code>description</code>，<code>version</code>，<code>mcversion</code>，<code>url</code>，和 <code>authorList</code> 属性进行定义。</p>
+<table>
+<thead>
+<tr>
+<th align="right">属性</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">modid</td>
+<td align="center">string</td>
+<td align="center">required</td>
+<td align="left">所描述的 mod 的 modid，如果该 mod 没有加载，该描述将会被忽略</td>
+</tr>
+<tr>
+<td align="right">name</td>
+<td align="center">string</td>
+<td align="center">required</td>
+<td align="left">该 mod 的一个用于显示的易于理解的名字</td>
+</tr>
+<tr>
+<td align="right">description</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">一到两段有关该 mod 的描述信息</td>
+</tr>
+<tr>
+<td align="right">version</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">mod 的版本</td>
+</tr>
+<tr>
+<td align="right">mcversion</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">Minecraft 的版本</td>
+</tr>
+<tr>
+<td align="right">url</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">mod 的主页链接</td>
+</tr>
+<tr>
+<td align="right">updateUrl</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">无用的定义。现在被 <code>updateJSON</code> 取代</td>
+</tr>
+<tr>
+<td align="right">updateJSON</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left"><a href="autoupdate#forge-update-checker">version JSON</a> 的地址</td>
+</tr>
+<tr>
+<td align="right">authorList</td>
+<td align="center">[string]</td>
+<td align="center"><code>[]</code></td>
+<td align="left">mod 的作者列表</td>
+</tr>
+<tr>
+<td align="right">credits</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">包含任何你想提到的致谢信息</td>
+</tr>
+<tr>
+<td align="right">logoFile</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">mod 的 logo 地址。 该地址会从 classpath 的最顶层开始解析，所以你应该将该文件放在一个不会产生命名冲突的位置， 建议放在 assets 文件夹。</td>
+</tr>
+<tr>
+<td align="right">screenshots</td>
+<td align="center">[string]</td>
+<td align="center"><code>[]</code></td>
+<td align="left">你想在 mod 介绍页面显示的截图列表。目前尚未实现。</td>
+</tr>
+<tr>
+<td align="right">parent</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">如果用到的的话，这里代指父 mod 的 modid。允许在信息页面出现另一个 mod 模块</td>
+</tr>
+<tr>
+<td align="right">useDependencyInformation</td>
+<td align="center">boolean</td>
+<td align="center"><code>false</code></td>
+<td align="left">如果该属性值和 <code>Mod.useMetadata</code> 的值都为 <code>true</code>，接下来的三个依赖项都会起作用。否则的话则无效</td>
+</tr>
+<tr>
+<td align="right">requiredMods</td>
+<td align="center">[string]</td>
+<td align="center"><code>[]</code></td>
+<td align="left">一个 modid 列表。如果其中有一个 mod 缺失，会引起游戏崩溃。 这一属性的值<strong>不会影响到 mod 的加载顺序</strong>，想要同时指定 mod 的加载顺序，请在 <code>dependencies</code> 属性中填写相同的值。</td>
+</tr>
+<tr>
+<td align="right">dependencies</td>
+<td align="center">[string]</td>
+<td align="center"><code>[]</code></td>
+<td align="left">一个 modid 列表。 所有列出的 mod 都会在当前 mod<strong>加载前</strong>加载。该项为空则顺序不会做出改变</td>
+</tr>
+<tr>
+<td align="right">dependants</td>
+<td align="center">[string]</td>
+<td align="center"><code>[]</code></td>
+<td align="left">一个 modid 列表。所有列出的 mod 都会在当前 mod<strong>加载后</strong>加载。该项为空则顺序不会做出改变</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://gist.github.com/anonymous/05ad9a1e0220bbdc25caed89ef0a22d2">BuildCraft</a> 使用了列出的大多数的属性值，可以作为一个很好的示例</p>
+<h2 id="mod_1">Mod 文件<a class="headerlink" href="#mod_1" title="Permanent link"> </a></h2>
+<p>我们在之前指定的包中创建一个你的 mod 名字的文件。这将作为 mod 的 <em>入口点</em>（entry point），并且包含一些特殊的标记。</p>
+<h2 id="mod_2">什么是 <code>@Mod</code><a class="headerlink" href="#mod_2" title="Permanent link"> </a></h2>
+<p><code>@Mod</code> 是一个 Java 注解，用来对 Forge Mod Loader（FML）说明当前类为 Mod 入口。该注解包含一些有关 mod 的元数据。并且该类会接受 <code>@EventHandler</code> 事件。</p>
+<p>这里有一个 <code>@Mod</code> 所包含的属性的表格:</p>
+<table>
+<thead>
+<tr>
+<th align="right">属性</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">modid</td>
+<td align="center">String</td>
+<td align="center">required</td>
+<td align="left">一个唯一的 mod 标识。必须为小写字符。并且长度在 64 字符以内</td>
+</tr>
+<tr>
+<td align="right">name</td>
+<td align="center">String</td>
+<td align="center">&rdquo;&ldquo;</td>
+<td align="left">一个可读性较强的用来显示的名字</td>
+</tr>
+<tr>
+<td align="right">version</td>
+<td align="center">String</td>
+<td align="center">&rdquo;&ldquo;</td>
+<td align="left">mod 的版本。该属性值只能为由点号分隔的数字组成。 理想情况下，该值符合 <a href="https://semver.org/">语义化的版本控制</a>。 即便是 <code>useMetadata</code> 设置为 <code>true</code>，将该值放在此处定义也是比较好的选择</td>
+</tr>
+<tr>
+<td align="right">dependencies</td>
+<td align="center">String</td>
+<td align="center">&rdquo;&ldquo;</td>
+<td align="left">mod 的依赖。可以在 Forge 的 Javadoc <code>@Mod</code> 部分找到详细的规范描述：依赖关系字符串必须具有以下四个前缀之一：<code>"before"</code>，<code>"after"</code>，<code>"required-before"</code>，<code>"required-after"</code>，紧接着是一个冒号 &ldquo;:&rdquo; 和之前定义的 &ldquo;modid&rdquo; 。可选的，你可以通过添加一个 <code>"@"</code> 然后再指定一个版本区间来为 mod 指定所需要的版本要求。如果缺少相应的 <code>required mod</code> 或者玩家使用了超出对版本的 mod， 玩家会启动失败并且会收到相应的错误提示</td>
+</tr>
+<tr>
+<td align="right">useMetadata</td>
+<td align="center">boolean</td>
+<td align="center">false</td>
+<td align="left">若该属性值设置为 <code>true</code>，由 <code>@Mod</code> 定义的内容会被 <code>mcmod.info</code> 内容覆盖</td>
+</tr>
+<tr>
+<td align="right">clientSideOnly</td>
+<td align="center">boolean</td>
+<td align="center">false</td>
+<td align="left">如果该值和 <code>serverSideOnly</code> 的值有任何一个设置为了 <code>true</code> 那么另一侧会挑过 jar 文件加载，不再加载 mod。如果该值和 <code>serverSideOnly</code> 值都设为了 <code>true</code> ，游戏会崩溃</td>
+</tr>
+<tr>
+<td align="right">serverSideOnly</td>
+<td align="center">boolean</td>
+<td align="center">false</td>
+<td align="left">如果该值和 <code>clientSideOnly</code> 的值有任何一个设置为了 <code>true</code> 那么另一侧会挑过 jar 文件加载，不再加载 mod。如果该值和 <code>clientSideOnly</code> 值都设为了 <code>true</code> ，游戏会崩溃</td>
+</tr>
+<tr>
+<td align="right">acceptedMinecraftVersions</td>
+<td align="center">String</td>
+<td align="center">&rdquo;&ldquo;</td>
+<td align="left">该字段指定了 mod 可以在哪个区间内的 Minecraft 版本上运行。将字符串置空则会默认接受所有 Minecraft 版本</td>
+</tr>
+<tr>
+<td align="right">acceptableRemoteVersions</td>
+<td align="center">String</td>
+<td align="center">&rdquo;&ldquo;</td>
+<td align="left">指定了该 mod 可以接受的客户端所用的该 mod 的版本，将该字段置空 <code>""</code> 代表只接受当前 mod 的版本,设置为<code>"*"</code> 代表街接受所有版本</td>
+</tr>
+<tr>
+<td align="right">acceptableSaveVersions</td>
+<td align="center">String</td>
+<td align="center">&rdquo;&ldquo;</td>
+<td align="left">A version range specifying compatible save version information. If you follow an unusual version convention, use <code>SaveInspectionHandler</code> instead.</td>
+</tr>
+<tr>
+<td align="right">certificateFingerprint</td>
+<td align="center">String</td>
+<td align="center">&rdquo;&ldquo;</td>
+<td align="left">前往 <a href="../../concepts/jarsigning/">jar signing</a> 查看更详细的说明</td>
+</tr>
+<tr>
+<td align="right">modLanguage</td>
+<td align="center">String</td>
+<td align="center">&ldquo;java&rdquo;</td>
+<td align="left">编写 mod 所使用的编程语言 <code>"java"</code> 或者 <code>"scala"</code>.</td>
+</tr>
+<tr>
+<td align="right">modLanguageAdapter</td>
+<td align="center">String</td>
+<td align="center">&rdquo;&ldquo;</td>
+<td align="left">Path to a language adapter for the mod. The class must have a default constructor and must implement <code>ILanguageAdapter</code>. If it doesn&rsquo;t, Forge will crash. If set, overrides <code>modLanguage</code>.</td>
+</tr>
+<tr>
+<td align="right">canBeDeactivated</td>
+<td align="center">boolean</td>
+<td align="center">false</td>
+<td align="left">This is not implemented, but if the mod could be deactivated (e.g. a minimap mod), this would be set to <code>true</code> and the mod would <a href="../../events/intro/#creating-an-event-handler">receive</a> <code>FMLDeactivationEvent</code> to perform cleanup tasks.</td>
+</tr>
+<tr>
+<td align="right">guiFactory</td>
+<td align="center">String</td>
+<td align="center">&rdquo;&ldquo;</td>
+<td align="left">Path to the mod&rsquo;s GUI factory, if one exists. GUI factories are used to make custom config screens, and must implement <code>IModGuiFactory</code>. For an example, look at <code>FMLConfigGuiFactory</code>.</td>
+</tr>
+<tr>
+<td align="right">updateJSON</td>
+<td align="center">String</td>
+<td align="center">&rdquo;&ldquo;</td>
+<td align="left">更新所需要的 JSON 文件的地址。前往 <a href="../autoupdate/">Forge 更新检查器</a> 查看更详细的信息</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>以上所有提到的有关版本区间的字段，例如 <code>acceptedMinecraftVersions</code> 等，都使用 <a href="https://maven.apache.org/enforcer/enforcer-rules/versionRanges.html">Maven 版本区间规范</a>。</li>
+</ul>
+<p>你可以在之前下载的 Mdk 的 <code>src</code> 目录中找到一个示例 mod。</p>
+<h2 id="_2">使用子包使代码保持整洁<a class="headerlink" href="#_2" title="Permanent link"> </a></h2>
+<p>建议你将 mod 进行分解，将不同内容放置在不同的包内，而不是将所有的代码全部丢在一个 class 文件中。</p>
+<p>一个通用的分包策略是将 mod 分为 <code>common</code> 和 <code>client</code> 两个包。<code>common</code> 内的内容为既运行在服务端也运行在客户端的代码，而 <code>client</code> 的内容为仅运行在客户端的代码。像物品，方块，实体（可以将每个实体各自分到一个子包内）我们通常放在 <code>common</code> 包内，而像图像渲染， UI 之类的代码放在 <code>client</code> 包内。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>这种分包风格只是一个种建议，是一个普遍使用的风格。你可以使用任何你觉得舒服的分包风格。</p>
+</div>
+<p>将代码整洁的保存在不同的子包内，有利于你之后有组织的对 mod 进行拓展</p>
+<h2 id="_3">类命名方案<a class="headerlink" href="#_3" title="Permanent link"> </a></h2>
+<p>一个通用的类命名方案可以让你轻松的描述该类所承担的工作，并且可以让其他开发者更方便的找到mod中对应的功能模块。</p>
+<p>例如：</p>
+<ul>
+<li>一个名为 <code>PowerRing</code> 的 <code>Item</code> 类应当放在 <code>item</code> 包中，并且命名为 <code>ItemPowerRing</code></li>
+<li>一个名为 <code>NotDirt</code> 的 <code>Block</code> 类应当放在 <code>block</code> 包中，并且命名为 <code>BlockNotDirt</code></li>
+<li>一个名为 <code>SuperChewer</code> 的 <code>TileEntity</code> 类应当放在 <code>tile</code> 或 <code>tileentity</code> 包中，并且命名为 <code>TileSuperChewer</code></li>
+</ul>
+<p>在类名面前写上该类的类名有利于猜测该类是什么或者是什么类型的</p>
+            
+        </article>
+        
+        <div class="docs-entry-footer-buttons" role="navigation" aria-label="footer navigation">
+            
+            <a href="../../gettingstarted/" title="概述" class="btn"><span class="fa fa-arrow-left"></span> Previous</a>
+            
+            
+            <a href="../../gettingstarted/autoupdate/" title="Forge 更新检查器" class="float-right btn">Next <span class="fa fa-arrow-right"></span></a>
+            
+        </div>
+        
+    </div>
+</main>
+<div class="wrapper">
+    <footer>
+        Built with <a href="https://www.mkdocs.org">MkDocs</a> using a custom theme. Hosted by <a href="https://readthedocs.org">Read the Docs</a>.
+        <div class="theme-switch-wrapper">
+            Enable Dark Theme
+            <label class="theme-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
