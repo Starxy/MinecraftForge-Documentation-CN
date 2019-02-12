@@ -1,11 +1,13 @@
 # Minecraft Forge Documentation
 
+> **目前 Forge 官方正在开发适用于 Minecraft 1.13 的新 Forge 版本，据官方公告从构建工具链开始都进行了重建，因此本文直到该版本发布之前不再进行频繁更新，避免产生无用的文档翻译**
+
 这里是 Minecraft Forge **官方文档的非官方中文翻译**。由 Mkdocs 进行构建。
 
 网站同步部署在 Github Page 和 Coding Page 服务上。二者内容上没有任何区别。请根据个人网络状态选择访问
 
 - [Github Page 部署](https://starxy.github.io/MinecraftForge-Documentation-CN/)
-- [Coding Page 部署](https://coding.starxy.cc)
+- [Coding Page 部署](https://coding.starxy.cc) # Coding Page 出了一些问题导致目前无法访问，待解决。
 
 英文的文档可以在这里找到: [http://mcforge.readthedocs.io/](http://mcforge.readthedocs.io/)。
 
