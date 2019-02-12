@@ -63,7 +63,7 @@
 
 我们在之前指定的包中创建一个你的 mod 名字的文件。这将作为 mod 的 *入口点*（entry point），并且包含一些特殊的标记。
 
-### 什么是 `@Mod`
+## 什么是 `@Mod`
 
 `@Mod` 是一个 Java 注解，用来对 Forge Mod Loader（FML）说明当前类为 Mod 入口。该注解包含一些有关 mod 的元数据。并且该类会接受 `@EventHandler` 事件。
 
